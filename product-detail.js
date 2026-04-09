@@ -235,8 +235,14 @@ function updateCartDisplay() {
   cartCount.textContent = totalItems;
 }
 
-// Initialize on page load
+// Initialize on page load (only if on product detail page)
 document.addEventListener('DOMContentLoaded', () => {
-  loadProductDetails();
-  updateCartDisplay();
+  // Only load product details if the product-detail-page element exists
+  if (document.querySelector('.product-detail-page')) {
+    loadProductDetails();
+  }
+  // Only update cart display if cartCount exists
+  if (document.getElementById('cartCount')) {
+    updateCartDisplay();
+  }
 });
