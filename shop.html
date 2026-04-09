@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — BO Organics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">BO Organics</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#ingredients">Ingredients</a></li>
+        <li><a href="joinbo.html" class="join-bo-link">Join BO</a></li>
+        <li class="nav-search">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+          <button id="searchBtn" class="search-btn" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="account-btn" id="accountLink" aria-label="Account">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Shop Section -->
+  <section class="shop-page" id="shop">
+    <div class="container">
+      <div class="shop-header">
+        <p class="section-label">Our Collection</p>
+        <h1 class="section-title">Shop All Products</h1>
+        <p class="section-description">Thoughtfully crafted essentials for your daily ritual</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="shop-filters">
+        <div class="filter-section">
+          <h3 class="filter-title">Filter by Type</h3>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="new">New Arrivals</button>
+            <button class="filter-btn" data-filter="face">Face Care</button>
+            <button class="filter-btn" data-filter="body">Body Care</button>
+            <button class="filter-btn" data-filter="eyes">Eye Care</button>
+            <button class="filter-btn" data-filter="hair">Hair Care</button>
+            <button class="filter-btn" data-filter="sets">Sets & Bundles</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+
+        <!-- Face Care Products -->
+        <div class="product-card" data-category="face" onclick="window.location.href='product-detail.html?product=radiance-face-serum'" style="cursor: pointer;">
+          <div class="product-badge">Bestseller</div>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Radiance Face Serum</h3>
+            <p class="product-desc">Rosehip & Vitamin C brightening serum for luminous, even-toned skin</p>
+            <div class="product-footer">
+              <span class="product-price">$48.00</span>
+              <button class="add-to-cart" data-name="Radiance Face Serum" data-price="48.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="face" onclick="window.location.href='product-detail.html?product=botanical-cleansing-oil'" style="cursor: pointer;">
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Botanical Cleansing Oil</h3>
+            <p class="product-desc">Gentle jojoba & chamomile oil cleanser that melts away impurities</p>
+            <div class="product-footer">
+              <span class="product-price">$36.00</span>
+              <button class="add-to-cart" data-name="Botanical Cleansing Oil" data-price="36.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="face new" onclick="window.location.href='product-detail.html?product=hydra-bloom-moisturizer'" style="cursor: pointer;">
+          <div class="product-badge new">New</div>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Hydra-Bloom Moisturizer</h3>
+            <p class="product-desc">Deep hydration with hyaluronic acid, aloe vera & shea butter</p>
+            <div class="product-footer">
+              <span class="product-price">$42.00</span>
+              <button class="add-to-cart" data-name="Hydra-Bloom Moisturizer" data-price="42.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body Care Products -->
+        <div class="product-card" data-category="body" onclick="window.location.href='product-detail.html?product=nourishing-body-butter'" style="cursor: pointer;">
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nourishing Body Butter</h3>
+            <p class="product-desc">Rich cocoa butter & lavender body cream for silky smooth skin</p>
+            <div class="product-footer">
+              <span class="product-price">$32.00</span>
+              <button class="add-to-cart" data-name="Nourishing Body Butter" data-price="32.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="body" onclick="window.location.href='product-detail.html?product=calming-body-oil'" style="cursor: pointer;">
+          <div class="product-badge">Popular</div>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Calming Body Oil</h3>
+            <p class="product-desc">Argan & sweet almond oil infused with calming essential oils</p>
+            <div class="product-footer">
+              <span class="product-price">$38.00</span>
+              <button class="add-to-cart" data-name="Calming Body Oil" data-price="38.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eye Care Products (New Category) -->
+        <div class="product-card" data-category="eyes new" onclick="window.location.href='product-detail.html?product=delicate-eye-contour'" style="cursor: pointer;">
+          <div class="product-badge new">New</div>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Delicate Eye Contour</h3>
+            <p class="product-desc">Caffeine & peptide-infused cream to reduce puffiness and fine lines</p>
+            <div class="product-footer">
+              <span class="product-price">$54.00</span>
+              <button class="add-to-cart" data-name="Delicate Eye Contour" data-price="54.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hair Care Products (New Category) -->
+        <div class="product-card" data-category="hair new" onclick="window.location.href='product-detail.html?product=nourishing-hair-elixir'" style="cursor: pointer;">
+          <div class="product-badge new">New</div>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9c0-3 2-5 6-5s6 2 6 5v3c0 2-1 4-3 4H9c-2 0-3-2-3-4V9z"/><path d="M9 16h6M8 20h8"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nourishing Hair Elixir</h3>
+            <p class="product-desc">Argan oil & botanical extracts to restore shine and elasticity</p>
+            <div class="product-footer">
+              <span class="product-price">$44.00</span>
+              <button class="add-to-cart" data-name="Nourishing Hair Elixir" data-price="44.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sets & Bundles -->
+        <div class="product-card" data-category="sets" onclick="window.location.href='product-detail.html?product=complete-glow-set'" style="cursor: pointer;">
+          <div class="product-badge">Bundle Deal</div>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9l6-6 6 6"/><rect x="3" y="9" width="18" height="12" rx="2"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Complete Glow Set</h3>
+            <p class="product-desc">Face serum, cleansing oil & moisturizer – everything you need</p>
+            <div class="product-footer">
+              <span class="product-price">$115.00</span>
+              <button class="add-to-cart" data-name="Complete Glow Set" data-price="115.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="sets" onclick="window.location.href='product-detail.html?product=body-care-collection'" style="cursor: pointer;">
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9l6-6 6 6"/><rect x="3" y="9" width="18" height="12" rx="2"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Body Care Collection</h3>
+            <p class="product-desc">Body butter, body oil & exfoliating scrub for total body care</p>
+            <div class="product-footer">
+              <span class="product-price">$98.00</span>
+              <button class="add-to-cart" data-name="Body Care Collection" data-price="98.00" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="logo">BO Organics</h3>
+          <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="index.html#ingredients">Ingredients</a></li>
+            <li><a href="index.html#testimonials">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li>hello@boorganics.com</li>
+            <li>(555) 123-4567</li>
+            <li>Mon - Fri, 9am - 5pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BO Organics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
