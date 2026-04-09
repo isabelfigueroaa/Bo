@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
 }
 
+#app {
+  padding-top: 80px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -205,6 +209,55 @@ p { margin-bottom: 1.2rem; }
 .join-bo-link:hover,
 .account-link:hover,
 .login-link:hover {
+  color: var(--burgundy);
+}
+
+/* ===== SEARCH BAR ===== */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg-light);
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: 'Montserrat', sans-serif;
+  width: 120px;
+  outline: none;
+  padding: 0;
+  transition: width 0.3s;
+}
+
+.search-input::placeholder {
+  color: var(--blue-gray);
+}
+
+.search-input:focus {
+  width: 160px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  margin-left: 8px;
+  transition: color 0.3s;
+}
+
+.search-btn:hover {
   color: var(--burgundy);
 }
 
@@ -445,6 +498,39 @@ p { margin-bottom: 1.2rem; }
 /* ===== SHOP SECTION ===== */
 .shop {
   padding: 80px 0;
+}
+
+.shop-page {
+  padding: 80px 0;
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.shop-filters {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: 0.5px;
 }
 
 .filter-bar {
@@ -1543,6 +1629,348 @@ p { margin-bottom: 1.2rem; }
   text-transform: uppercase;
 }
 
+/* ===== PRODUCT DETAIL PAGE ===== */
+.product-detail-page {
+  padding: 80px 0;
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--burgundy);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  transition: all 0.3s;
+}
+
+.back-link:hover {
+  transform: translateX(-5px);
+}
+
+.product-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: flex-start;
+}
+
+.product-detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 100px;
+}
+
+.product-detail-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-gray);
+}
+
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-detail-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin: 0;
+}
+
+.product-detail-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text);
+}
+
+.product-detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-detail-rating .stars {
+  display: flex;
+  gap: 4px;
+}
+
+.product-detail-rating .stars svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--burgundy);
+  fill: var(--burgundy);
+}
+
+.rating-text {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.product-detail-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--burgundy);
+}
+
+.product-detail-description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.product-detail-info {
+  padding: 20px 0;
+}
+
+.product-detail-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.product-detail-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-detail-info li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.product-detail-info li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--burgundy);
+  font-weight: bold;
+}
+
+.product-detail-info p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+.product-detail-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.quantity-selector button {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text);
+  transition: background 0.3s;
+}
+
+.quantity-selector button:hover {
+  background: var(--bg-light);
+}
+
+.quantity-selector input {
+  width: 50px;
+  border: none;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.quantity-selector input:focus {
+  outline: none;
+}
+
+.btn-large {
+  padding: 12px 40px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.product-detail-shipping {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.product-detail-shipping p {
+  font-size: 0.85rem;
+  margin: 8px 0;
+  color: var(--text);
+}
+
+.related-products-section {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.related-products-section h2 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--text);
+}
+
+/* ===== INGREDIENTS PAGE ===== */
+.ingredients-page {
+  padding: 80px 0;
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+.ingredients-cta {
+  padding: 80px 0;
+  background: var(--bg-light);
+  text-align: center;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.cta-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+}
+
+.cta-content p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.ingredient-commitment {
+  margin-top: 40px;
+  padding: 30px;
+  background: var(--cream);
+  border-radius: 8px;
+  border-left: 4px solid var(--burgundy);
+}
+
+.ingredient-commitment h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 0;
+  color: var(--text);
+}
+
+.ingredient-commitment p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0;
+}
+
+.ingredient-item p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-page {
+  padding: 80px 0;
+  background: var(--cream);
+}
+
+.about-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-text-content h1 {
+  margin-top: 10px;
+}
+
+.about-values {
+  margin-top: 40px;
+  padding: 30px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.about-values h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.about-values ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.about-values li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  padding-left: 0;
+}
+
+.about-values strong {
+  color: var(--burgundy);
+}
+
+.about-text-content .btn {
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
 /* ===== EXPERIENCE MODAL ===== */
 .experience-overlay {
   position: fixed;
@@ -1647,6 +2075,19 @@ p { margin-bottom: 1.2rem; }
 
   .nav-links {
     display: none;
+  }
+
+  .nav-search {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .search-input {
+    width: 100px;
+  }
+
+  .search-input:focus {
+    width: 130px;
   }
 
   .hero-title {
