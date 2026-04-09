@@ -239,10 +239,15 @@ function getHomePage() {
     <!-- Ingredients CTA -->
     <section class="ingredients-cta">
       <div class="container">
-        <div class="cta-content">
-          <h2>Clean Ingredients, Real Results</h2>
-          <p>Discover the premium botanicals behind our skincare</p>
-          <a href="#/ingredients" class="btn btn-primary">Explore Our Ingredients</a>
+        <div class="ingredients-cta-grid">
+          <div class="ingredients-cta-content">
+            <h2>Clean Ingredients, Real Results</h2>
+            <p>Every product starts with nature's most potent botanicals. We never use parabens, sulfates, synthetic fragrances, or artificial colors. Our commitment to purity means every ingredient is carefully selected for its effectiveness and safety.</p>
+            <a href="#/ingredients" class="btn btn-primary">Explore Our Ingredients</a>
+          </div>
+          <div class="ingredients-cta-image">
+            <img src="fruit-and-cream.jpg" alt="Fresh fruits and cream ingredients" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+          </div>
         </div>
       </div>
     </section>
