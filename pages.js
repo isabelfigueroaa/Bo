@@ -2,8 +2,68 @@
    BO Organics — SPA Page Templates
    ============================================ */
 
+// Ingredient Database
+const ingredientsDatabase = {
+  'rosehip': {
+    name: 'Rosehip Seed Oil',
+    description: 'Rich in vitamins A & C for cell regeneration and brightening',
+    fullDescription: 'Rosehip seed oil is extracted from the seeds of the rosehip plant and is renowned for its exceptional skin-loving properties. Rich in vitamins A, C, and E, as well as essential fatty acids, this oil works to boost collagen production, reduce the appearance of scars, age spots, and fine lines. It promotes skin renewal and gives a radiant, youthful glow. The natural retinol content makes it perfect for anti-aging treatments while remaining gentle enough for sensitive skin.',
+    benefits: ['Cell regeneration', 'Brightening and even tone', 'Reduces scars & age spots', 'Boosts collagen', 'Gentle on sensitive skin'],
+    usedIn: ['Radiance Face Serum', 'Complete Glow Set']
+  },
+  'shea': {
+    name: 'Shea Butter',
+    description: 'Deep moisture and skin barrier protection',
+    fullDescription: 'Shea butter is a natural fat extracted from the kernels of shea tree nuts, native to West Africa. It\'s loaded with vitamins A, E, and F, as well as fatty acids that deeply nourish and protect the skin. Shea butter creates a protective barrier against environmental damage while providing intense hydration. It\'s rich enough for dry skin yet non-comedogenic, making it suitable for all skin types. The natural compounds in shea butter promote healing and reduce inflammation.',
+    benefits: ['Deep hydration', 'Barrier protection', 'Anti-inflammatory', 'Rich in vitamins', 'Non-comedogenic'],
+    usedIn: ['Hydra-Bloom Moisturizer', 'Nourishing Body Butter']
+  },
+  'jojoba': {
+    name: 'Jojoba Oil',
+    description: 'Balances oil production, lightweight hydration',
+    fullDescription: 'Jojoba oil is derived from the seeds of the jojoba plant and is remarkably similar in composition to the skin\'s natural sebum. This makes it the perfect oil for all skin types—it deeply moisturizes without leaving a greasy residue. Jojoba oil regulates sebum production, making it ideal for both oily and dry skin. It\'s rich in iodine, which provides antibacterial and antifungal properties. The oil also contains vitamin E and B-complex vitamins for skin protection and rejuvenation.',
+    benefits: ['Balances oil production', 'Lightweight', 'Absorbs quickly', 'Antibacterial', 'Suitable for all skin types'],
+    usedIn: ['Botanical Cleansing Oil', 'Radiance Face Serum']
+  },
+  'chamomile': {
+    name: 'Chamomile Extract',
+    description: 'Calming anti-inflammatory for sensitive skin',
+    fullDescription: 'Chamomile has been used in skincare for centuries due to its powerful anti-inflammatory and soothing properties. The extract is packed with antioxidants and flavonoids that calm irritation, reduce redness, and promote healing. Chamomile is gentle enough for the most sensitive skin types and works beautifully to soothe reactive or compromised skin. It also has mild antiseptic properties and helps the skin maintain its natural pH balance. Perfect for anyone dealing with inflammation, acne, or sensitivity.',
+    benefits: ['Calming & soothing', 'Anti-inflammatory', 'Reduces redness', 'Gentle on sensitive skin', 'Promotes healing'],
+    usedIn: ['Botanical Cleansing Oil', 'Hydra-Bloom Moisturizer']
+  },
+  'hyaluronic': {
+    name: 'Hyaluronic Acid',
+    description: 'Plant-derived, holds 1000x its weight in water',
+    fullDescription: 'Hyaluronic acid is a naturally occurring substance found in the body, and we use a plant-derived form in our skincare. This humectant has an extraordinary ability to hold up to 1000 times its weight in water, making it the ultimate hydrator. It plumps the skin from within, reducing the appearance of fine lines and wrinkles while maintaining skin elasticity. Hyaluronic acid works best in layered skincare—applying it to damp skin helps it absorb maximum moisture. The result is visibly plumper, smoother, more youthful-looking skin.',
+    benefits: ['Intense hydration', 'Plumps fine lines', 'Boosts elasticity', 'Lightweight formula', 'Improves skin texture'],
+    usedIn: ['Hydra-Bloom Moisturizer', 'Delicate Eye Contour']
+  },
+  'argan': {
+    name: 'Argan Oil',
+    description: 'Rich in antioxidants and essential fatty acids',
+    fullDescription: 'Argan oil, often called "liquid gold," is cold-pressed from the kernels of argan tree nuts found in Morocco. It\'s incredibly rich in antioxidants, vitamin E, and essential fatty acids that nourish, protect, and repair the skin. Argan oil is easily absorbed and doesn\'t leave a greasy finish, making it perfect for all skin types. It strengthens skin barrier function, reduces inflammation, and promotes a healthy glow. The oil also works beautifully on hair and nails, making it a true multi-purpose beauty ingredient.',
+    benefits: ['Rich antioxidants', 'Vitamin E protection', 'Nourishes deeply', 'Non-greasy', 'Anti-aging properties'],
+    usedIn: ['Calming Body Oil', 'Nourishing Hair Elixir']
+  },
+  'vitamin-e': {
+    name: 'Vitamin E',
+    description: 'Powerful antioxidant protection against environmental damage',
+    fullDescription: 'Vitamin E is one of the most powerful antioxidants in skincare, protecting your skin from free radical damage and environmental stressors like pollution and UV rays. It\'s a fat-soluble vitamin that penetrates deeply into the skin to provide long-lasting protection. Vitamin E supports skin repair, maintains skin elasticity, and helps prevent premature aging. When combined with other antioxidants like vitamin C, it becomes even more effective. It\'s also known for its soothing properties, making it ideal for sensitive or irritated skin.',
+    benefits: ['Antioxidant protection', 'Prevents premature aging', 'Supports skin repair', 'Anti-inflammatory', 'Enhances other actives'],
+    usedIn: ['Botanical Cleansing Oil', 'Nourishing Body Butter']
+  },
+  'aloe': {
+    name: 'Aloe Vera',
+    description: 'Soothing and hydrating for sensitive skin',
+    fullDescription: 'Aloe vera has been used in skincare for thousands of years and for good reason. The gel from aloe vera leaves contains vitamins, minerals, amino acids, and antioxidants that soothe, hydrate, and heal the skin. It\'s particularly effective for sensitive, irritated, or inflamed skin, helping to reduce redness and promote faster healing. Aloe vera is incredibly hydrating yet lightweight, making it perfect for all skin types. It also has mild antiseptic properties and helps maintain the skin\'s natural moisture balance without clogging pores.',
+    benefits: ['Soothing & calming', 'Intense hydration', 'Promotes healing', 'Reduces inflammation', 'Lightweight feel'],
+    usedIn: ['Hydra-Bloom Moisturizer', 'Delicate Eye Contour']
+  }
+};
+
 // All page templates returned as HTML strings
-// Routes: #/, #/about, #/shop, #/ingredients, #/joinbo, #/login, #/product/:id
+// Routes: #/, #/about, #/shop, #/ingredients, #/joinbo, #/login, #/ingredient/:id, #/product/:id
 
 // HOME PAGE
 function getHomePage() {
@@ -716,56 +776,56 @@ function getIngredientsPage() {
             <h1 class="section-title">Clean Ingredients,<br>Real Results</h1>
             <p class="ingredients-text">Every product starts with nature's most potent botanicals. We never use parabens, sulfates, synthetic fragrances, or artificial colors. Our commitment to purity means every ingredient is carefully selected for its effectiveness and safety.</p>
             <div class="ingredients-list">
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/rosehip'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Rosehip Seed Oil</strong>
                   <p>Rich in vitamins A & C for cell regeneration and brightening. Boosts collagen production and reduces the appearance of scars and age spots.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/shea'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Shea Butter</strong>
                   <p>Deep moisture and skin barrier protection. Contains fatty acids and vitamins that nourish and protect the skin from environmental damage.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/jojoba'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Jojoba Oil</strong>
                   <p>Balances oil production, lightweight hydration. Closely mimics skin's natural sebum, making it suitable for all skin types.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/chamomile'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Chamomile Extract</strong>
                   <p>Calming anti-inflammatory for sensitive skin. Soothes irritation and promotes healing for compromised or reactive skin.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/hyaluronic'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Hyaluronic Acid</strong>
                   <p>Plant-derived, holds 1000x its weight in water. Provides intense hydration and plumps the skin for a youthful appearance.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/argan'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Argan Oil</strong>
                   <p>Rich in antioxidants and essential fatty acids. Nourishes and protects skin while maintaining its natural balance.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/vitamin-e'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Vitamin E</strong>
                   <p>Powerful antioxidant protection against environmental damage. Prevents premature aging and supports skin repair.</p>
                 </div>
               </div>
-              <div class="ingredient-item">
+              <div class="ingredient-item" onclick="window.location.hash='#/ingredient/aloe'" style="cursor: pointer;">
                 <span class="ingredient-dot"></span>
                 <div>
                   <strong>Aloe Vera</strong>
@@ -950,5 +1010,102 @@ function getLoginPage() {
         </div>
       </div>
     </div>
+  `;
+}
+
+// INGREDIENT DETAIL PAGE
+function getIngredientDetailPage(ingredientId) {
+  const ingredient = ingredientsDatabase[ingredientId];
+
+  if (!ingredient) {
+    return `
+      <section class="ingredient-detail-page">
+        <div class="container">
+          <p>Ingredient not found</p>
+          <a href="#/ingredients" class="btn btn-primary">Back to Ingredients</a>
+        </div>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="ingredient-detail-page">
+      <div class="container">
+        <a href="#/ingredients" class="back-link">← Back to Ingredients</a>
+
+        <div class="ingredient-detail-grid">
+          <div class="ingredient-detail-image">
+            <div class="ingredient-image-placeholder">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center; padding: 20px;">
+                ${ingredient.name}
+              </div>
+            </div>
+          </div>
+
+          <div class="ingredient-detail-content">
+            <h1>${ingredient.name}</h1>
+            <p class="ingredient-short-desc">${ingredient.description}</p>
+
+            <div class="ingredient-detail-text">
+              <p>${ingredient.fullDescription}</p>
+            </div>
+
+            <div class="ingredient-benefits">
+              <h3>Key Benefits</h3>
+              <ul>
+                ${ingredient.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div class="ingredient-products">
+              <h3>Found In</h3>
+              <p>${ingredient.usedIn.join(', ')}</p>
+            </div>
+
+            <div class="ingredient-detail-cta">
+              <a href="#/shop" class="btn btn-primary">Shop Products with ${ingredient.name}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="logo">BO Organics</h3>
+            <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#/shop">Shop All</a></li>
+              <li><a href="#/about">Our Story</a></li>
+              <li><a href="#/ingredients">Ingredients</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+              <li>hello@boorganics.com</li>
+              <li>(555) 123-4567</li>
+              <li>Mon - Fri, 9am - 5pm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 BO Organics. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   `;
 }

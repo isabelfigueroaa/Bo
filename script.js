@@ -107,6 +107,9 @@ function renderPage(route) {
     case 'ingredients':
       html = getIngredientsPage();
       break;
+    case 'ingredient':
+      html = getIngredientDetailPage(param);
+      break;
     case 'joinbo':
       html = getJoinBoPage();
       break;
