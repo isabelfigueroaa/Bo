@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — BO Organics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .checkout-page {
+      min-height: 100vh;
+      background: var(--cream);
+      padding: 80px 20px 60px;
+    }
+
+    .checkout-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .checkout-form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .checkout-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--burgundy);
+      box-shadow: 0 0 0 3px rgba(106, 3, 20, 0.1);
+      background: rgba(106, 3, 20, 0.02);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: var(--bg-light);
+      border-radius: 4px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      margin: 0;
+      cursor: pointer;
+      font-weight: 400;
+    }
+
+    .order-summary {
+      position: sticky;
+      top: 100px;
+    }
+
+    .order-summary-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+
+    .order-items {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px;
+      margin-bottom: 30px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .order-item:last-child {
+      border-bottom: none;
+    }
+
+    .order-item-name {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .order-item-qty {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .order-item-price {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .order-summary-section {
+      background: var(--bg-light);
+      padding: 24px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .order-summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      font-size: 0.95rem;
+    }
+
+    .order-summary-row.total {
+      border-top: 2px solid var(--border);
+      padding-top: 16px;
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .order-summary-row.total span:last-child {
+      color: var(--burgundy);
+      font-size: 1.3rem;
+    }
+
+    .order-summary-label {
+      color: var(--text-light);
+    }
+
+    .checkout-button {
+      width: 100%;
+      padding: 16px;
+      background: var(--burgundy);
+      color: var(--cream);
+      border: none;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .checkout-button:hover {
+      background: #5a0210;
+      box-shadow: 0 12px 24px rgba(106, 3, 20, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .checkout-button:active {
+      transform: translateY(0);
+    }
+
+    .back-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: var(--burgundy);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover {
+      color: var(--text);
+    }
+
+    .checkout-success {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .checkout-success.show {
+      display: block;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .success-icon svg {
+      width: 40px;
+      height: 40px;
+      stroke: white;
+      stroke-width: 2;
+    }
+
+    .success-message {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .success-description {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .success-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .success-buttons .btn {
+      padding: 12px 32px;
+    }
+
+    @media (max-width: 768px) {
+      .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .order-summary {
+        position: relative;
+        top: auto;
+      }
+
+      .checkout-page {
+        padding: 60px 20px 40px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Shop</a>
+
+  <section class="checkout-page">
+    <div class="checkout-container">
+      <!-- Checkout Form -->
+      <div class="checkout-form-section">
+        <form id="checkoutForm">
+          <!-- Billing Information -->
+          <section>
+            <h2 class="checkout-section-title">Billing Information</h2>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Address *</label>
+              <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required>
+              </div>
+              <div class="form-group">
+                <label for="state">State/Province *</label>
+                <input type="text" id="state" name="state" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="zip">ZIP/Postal Code *</label>
+                <input type="text" id="zip" name="zip" required>
+              </div>
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <input type="text" id="country" name="country" value="United States" required>
+              </div>
+            </div>
+          </section>
+
+          <!-- Shipping Information -->
+          <section>
+            <h2 class="checkout-section-title">Shipping Information</h2>
+            <div class="checkbox-group">
+              <input type="checkbox" id="sameAsBilling" name="sameAsBilling" checked>
+              <label for="sameAsBilling">Same as billing address</label>
+            </div>
+            <div id="shippingFields" style="display: none; margin-top: 20px;">
+              <div class="form-group">
+                <label for="shippingAddress">Address *</label>
+                <input type="text" id="shippingAddress" name="shippingAddress">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="shippingCity">City *</label>
+                  <input type="text" id="shippingCity" name="shippingCity">
+                </div>
+                <div class="form-group">
+                  <label for="shippingState">State/Province *</label>
+                  <input type="text" id="shippingState" name="shippingState">
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+              <label style="font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 16px;">Shipping Method *</label>
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 12px; background: var(--bg-light); border-radius: 4px;">
+                  <input type="radio" name="shipping" value="5.00" checked required>
+                  <span style="flex: 1;">
+                    <strong>Standard Shipping</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-light);">5-7 business days</span>
+                  </span>
+                  <span style="font-weight: 600;">$5.00</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 12px; background: var(--bg-light); border-radius: 4px;">
+                  <input type="radio" name="shipping" value="12.00" required>
+                  <span style="flex: 1;">
+                    <strong>Express Shipping</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-light);">2-3 business days</span>
+                  </span>
+                  <span style="font-weight: 600;">$12.00</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 12px; background: var(--bg-light); border-radius: 4px;">
+                  <input type="radio" name="shipping" value="20.00" required>
+                  <span style="flex: 1;">
+                    <strong>Overnight Shipping</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-light);">Next business day</span>
+                  </span>
+                  <span style="font-weight: 600;">$20.00</span>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <!-- Payment Information -->
+          <section>
+            <h2 class="checkout-section-title">Payment Information</h2>
+            <div class="form-group">
+              <label for="cardName">Cardholder Name *</label>
+              <input type="text" id="cardName" name="cardName" required>
+            </div>
+            <div class="form-group">
+              <label for="cardNumber">Card Number *</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cardExpiry">Expiry Date *</label>
+                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY" required>
+              </div>
+              <div class="form-group">
+                <label for="cardCVC">CVC *</label>
+                <input type="text" id="cardCVC" name="cardCVC" placeholder="123" required>
+              </div>
+            </div>
+          </section>
+
+          <button type="submit" class="checkout-button">COMPLETE PURCHASE</button>
+        </form>
+
+        <!-- Success Message -->
+        <div class="checkout-success" id="checkoutSuccess">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h2 class="success-message">Thank You!</h2>
+          <p class="success-description">Your order has been placed successfully.<br>You'll receive a confirmation email shortly.</p>
+          <div class="success-buttons">
+            <a href="index.html" class="btn btn-primary">Back to Shop</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h2 class="order-summary-title">Order Summary</h2>
+
+        <div class="order-items" id="checkoutItems">
+          <p style="text-align: center; color: var(--text-light);">Your cart is empty</p>
+        </div>
+
+        <div class="order-summary-section">
+          <div class="order-summary-row">
+            <span class="order-summary-label">Subtotal</span>
+            <span id="summarySubtotal">$0.00</span>
+          </div>
+          <div class="order-summary-row">
+            <span class="order-summary-label">Shipping</span>
+            <span id="summaryShipping">$5.00</span>
+          </div>
+          <div class="order-summary-row">
+            <span class="order-summary-label">Tax (10%)</span>
+            <span id="summaryTax">$0.00</span>
+          </div>
+          <div class="order-summary-row total">
+            <span>Total</span>
+            <span id="checkoutTotal">$0.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Get cart from session storage
+    const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+    const TAX_RATE = 0.10; // 10% tax
+
+    // Elements
+    const checkoutForm = document.getElementById('checkoutForm');
+    const checkoutSuccess = document.getElementById('checkoutSuccess');
+    const checkoutItems = document.getElementById('checkoutItems');
+    const summarySubtotal = document.getElementById('summarySubtotal');
+    const summaryShipping = document.getElementById('summaryShipping');
+    const summaryTax = document.getElementById('summaryTax');
+    const checkoutTotal = document.getElementById('checkoutTotal');
+    const sameAsBilling = document.getElementById('sameAsBilling');
+    const shippingFields = document.getElementById('shippingFields');
+
+    // Initialize order summary
+    function initializeOrder() {
+      if (cart.length === 0) {
+        checkoutItems.innerHTML = '<p style="text-align: center; color: var(--text-light);">Your cart is empty</p>';
+        return;
+      }
+
+      checkoutItems.innerHTML = cart.map(item => `
+        <div class="order-item">
+          <div>
+            <div class="order-item-name">${item.name}</div>
+            <div class="order-item-qty">Qty: ${item.qty}</div>
+          </div>
+          <div class="order-item-price">$${(item.price * item.qty).toFixed(2)}</div>
+        </div>
+      `).join('');
+
+      updateOrderSummary();
+    }
+
+    // Update order summary with tax and shipping
+    function updateOrderSummary() {
+      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const shippingCost = parseFloat(document.querySelector('input[name="shipping"]:checked').value);
+      const tax = subtotal * TAX_RATE;
+      const total = subtotal + shippingCost + tax;
+
+      summarySubtotal.textContent = '$' + subtotal.toFixed(2);
+      summaryShipping.textContent = '$' + shippingCost.toFixed(2);
+      summaryTax.textContent = '$' + tax.toFixed(2);
+      checkoutTotal.textContent = '$' + total.toFixed(2);
+    }
+
+    // Handle "Same as billing" checkbox
+    sameAsBilling.addEventListener('change', () => {
+      if (sameAsBilling.checked) {
+        shippingFields.style.display = 'none';
+      } else {
+        shippingFields.style.display = 'block';
+      }
+    });
+
+    // Update order summary on shipping method change
+    document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+      radio.addEventListener('change', updateOrderSummary);
+    });
+
+    // Handle form submission
+    checkoutForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Show success message
+      checkoutForm.style.display = 'none';
+      checkoutSuccess.classList.add('show');
+
+      // Clear cart and redirect after 3 seconds
+      setTimeout(() => {
+        sessionStorage.removeItem('cart');
+        window.location.href = 'index.html';
+      }, 3000);
+    });
+
+    // Initialize on load
+    window.addEventListener('load', () => {
+      if (cart.length === 0) {
+        checkoutItems.innerHTML = '<p style="text-align: center; color: var(--text-light); padding: 40px 20px;">Your cart is empty. <a href="index.html" style="color: var(--burgundy); text-decoration: none; font-weight: 600;">Go back to shop</a></p>';
+      } else {
+        initializeOrder();
+      }
+    });
+
+    initializeOrder();
+  </script>
+</body>
+</html>
