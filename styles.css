@@ -361,7 +361,7 @@ p { margin-bottom: 1.2rem; }
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('cover-image.jpg') center center / cover no-repeat;
+  background: url('Images/cover-image.jpg') center 18% / cover no-repeat;
   overflow: hidden;
   margin-top: 60px;
 }
@@ -381,7 +381,7 @@ p { margin-bottom: 1.2rem; }
   text-align: center;
   color: var(--cream);
   max-width: 800px;
-  padding: 0 20px;
+  padding: 80px 20px 0;
 }
 
 .hero-subtitle {
@@ -2134,6 +2134,28 @@ p { margin-bottom: 1.2rem; }
 
   .nav-links {
     display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background: var(--cream);
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    z-index: 999;
+  }
+
+  .nav-links.open li {
+    padding: 12px 20px;
+  }
+
+  .nav-links.open a {
+    color: var(--text);
   }
 
   .nav-search {
