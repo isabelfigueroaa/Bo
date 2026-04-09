@@ -298,7 +298,7 @@ p { margin-bottom: 1.2rem; }
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('Images/cover image.jpg') center center / cover no-repeat;
+  background: url('cover-image.jpg') center center / cover no-repeat;
   overflow: hidden;
   margin-top: 60px;
 }
