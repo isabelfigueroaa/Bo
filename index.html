@@ -9,24 +9,33 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation (STATIC - NEVER CHANGES) -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">BO Organics</a>
+      <a href="#/" class="logo">BO Organics</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#ingredients">Ingredients</a></li>
-        <li><a href="joinbo.html" class="join-bo-link">Join BO</a></li>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/shop">Shop</a></li>
+        <li><a href="#/ingredients">Ingredients</a></li>
+        <li><a href="#/joinbo">Join BO</a></li>
+        <li class="nav-search">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+          <button id="searchBtn" class="search-btn" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </li>
       </ul>
       <div class="nav-actions">
-        <a href="login.html" class="account-btn" id="accountLink" aria-label="Account">
+        <a href="#/login" class="account-btn" aria-label="Account">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
           </svg>
@@ -43,465 +52,12 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-subtitle">Pure, Intentional Beauty</p>
-      <h1 class="hero-title">Nourish Your Skin<br>With Nature's Finest</h1>
-      <p class="hero-description">Handcrafted organic skincare made with ethically sourced botanicals. No synthetics. No compromises. Just pure, radiant beauty.</p>
-      <div class="hero-buttons">
-        <a href="#shop" class="btn btn-primary">Shop Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Banner -->
-  <section class="features">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature">
-          <div class="feature-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>100% Organic</h3>
-          <p>Certified organic ingredients from trusted farms</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-            </svg>
-          </div>
-          <h3>Cruelty Free</h3>
-          <p>Never tested on animals, always kind</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Sustainable</h3>
-          <p>Eco-friendly packaging and zero waste</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
-            </svg>
-          </div>
-          <h3>Handcrafted</h3>
-          <p>Small-batch production with care</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Shop Section -->
-  <section class="shop" id="shop">
-    <div class="container">
-      <p class="section-label center">Our Collection</p>
-      <h2 class="section-title center">Shop Our Bestsellers</h2>
-      <p class="section-description center">Thoughtfully crafted essentials for your daily ritual</p>
-
-      <!-- Category Filter -->
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="face">Face</button>
-        <button class="filter-btn" data-filter="body">Body</button>
-        <button class="filter-btn" data-filter="hair">Hair</button>
-        <button class="filter-btn" data-filter="sets">Sets</button>
-      </div>
-
-      <!-- Products Grid -->
-      <div class="products-grid" id="productsGrid">
-
-        <div class="product-card" data-category="face">
-          <div class="product-badge">Bestseller</div>
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Radiance Face Serum</h3>
-            <p class="product-desc">Rosehip & Vitamin C brightening serum for luminous, even-toned skin</p>
-            <div class="product-footer">
-              <span class="product-price">$48.00</span>
-              <button class="add-to-cart" data-name="Radiance Face Serum" data-price="48.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="face">
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Botanical Cleansing Oil</h3>
-            <p class="product-desc">Gentle jojoba & chamomile oil cleanser that melts away impurities</p>
-            <div class="product-footer">
-              <span class="product-price">$36.00</span>
-              <button class="add-to-cart" data-name="Botanical Cleansing Oil" data-price="36.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="face">
-          <div class="product-badge new">New</div>
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Hydra-Bloom Moisturizer</h3>
-            <p class="product-desc">Deep hydration with hyaluronic acid, aloe vera & shea butter</p>
-            <div class="product-footer">
-              <span class="product-price">$42.00</span>
-              <button class="add-to-cart" data-name="Hydra-Bloom Moisturizer" data-price="42.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="body">
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Nourishing Body Butter</h3>
-            <p class="product-desc">Rich cocoa butter & lavender body cream for silky smooth skin</p>
-            <div class="product-footer">
-              <span class="product-price">$32.00</span>
-              <button class="add-to-cart" data-name="Nourishing Body Butter" data-price="32.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="body">
-          <div class="product-badge">Popular</div>
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Calming Body Oil</h3>
-            <p class="product-desc">Argan & sweet almond oil infused with calming essential oils</p>
-            <div class="product-footer">
-              <span class="product-price">$38.00</span>
-              <button class="add-to-cart" data-name="Calming Body Oil" data-price="38.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="hair">
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Repair Hair Mask</h3>
-            <p class="product-desc">Avocado & keratin deep conditioning treatment for damaged hair</p>
-            <div class="product-footer">
-              <span class="product-price">$28.00</span>
-              <button class="add-to-cart" data-name="Repair Hair Mask" data-price="28.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="hair">
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Shine & Smooth Serum</h3>
-            <p class="product-desc">Lightweight argan oil serum for frizz-free, glossy hair</p>
-            <div class="product-footer">
-              <span class="product-price">$26.00</span>
-              <button class="add-to-cart" data-name="Shine & Smooth Serum" data-price="26.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-category="sets">
-          <div class="product-badge">Best Value</div>
-          <div class="product-image">
-            <div class="product-image-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
-            </div>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Complete Glow Set</h3>
-            <p class="product-desc">Full skincare ritual — cleanser, serum, moisturizer & lip balm</p>
-            <div class="product-footer">
-              <span class="product-price"><span class="price-original">$140.00</span> $112.00</span>
-              <button class="add-to-cart" data-name="Complete Glow Set" data-price="112.00">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Ingredients Section -->
-  <section class="ingredients" id="ingredients">
-    <div class="container">
-      <div class="ingredients-grid">
-        <div class="ingredients-content">
-          <p class="section-label">What We Use</p>
-          <h2 class="section-title">Clean Ingredients,<br>Real Results</h2>
-          <p class="ingredients-text">Every product starts with nature's most potent botanicals. We never use parabens, sulfates, synthetic fragrances, or artificial colors.</p>
-          <div class="ingredients-list">
-            <div class="ingredient-item">
-              <span class="ingredient-dot"></span>
-              <div>
-                <strong>Rosehip Seed Oil</strong>
-                <p>Rich in vitamins A & C for cell regeneration</p>
-              </div>
-            </div>
-            <div class="ingredient-item">
-              <span class="ingredient-dot"></span>
-              <div>
-                <strong>Shea Butter</strong>
-                <p>Deep moisture and skin barrier protection</p>
-              </div>
-            </div>
-            <div class="ingredient-item">
-              <span class="ingredient-dot"></span>
-              <div>
-                <strong>Jojoba Oil</strong>
-                <p>Balances oil production, lightweight hydration</p>
-              </div>
-            </div>
-            <div class="ingredient-item">
-              <span class="ingredient-dot"></span>
-              <div>
-                <strong>Chamomile Extract</strong>
-                <p>Calming anti-inflammatory for sensitive skin</p>
-              </div>
-            </div>
-            <div class="ingredient-item">
-              <span class="ingredient-dot"></span>
-              <div>
-                <strong>Hyaluronic Acid</strong>
-                <p>Plant-derived, holds 1000x its weight in water</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ingredients-visual">
-          <div class="ingredients-image-placeholder" style="padding: 0; overflow: hidden;">
-            <img src="fruit-and-cream.jpg" alt="Fresh fruits and cream ingredients" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
-            <span>Ethically Sourced</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <p class="section-label center">What People Say</p>
-      <h2 class="section-title center">Loved by Thousands</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial-text">"The Radiance Face Serum completely transformed my skin. I've never felt so confident going without makeup. Truly a game changer."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">S</div>
-            <div>
-              <strong>Sofia M.</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial-text">"I'm obsessed with the Nourishing Body Butter. The lavender scent is heavenly and my skin stays moisturized all day. Will never switch brands."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
-            <div>
-              <strong>Amara K.</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial-text">"Finally, a brand that delivers on its promises. The Complete Glow Set is worth every penny. My sensitive skin has never been happier."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">L</div>
-            <div>
-              <strong>Leah T.</strong>
-              <span>Verified Buyer</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter Section -->
-  <section class="newsletter">
-    <div class="container">
-      <div class="newsletter-content">
-        <h2>Join the BO Organics Family</h2>
-        <p>Subscribe for exclusive offers, skincare tips, and early access to new products.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Account / Login Modal -->
-  <div class="account-overlay" id="accountOverlay"></div>
-  <div class="account-modal" id="accountModal">
-    <div class="account-content">
-      <div class="account-image">
-        <div class="account-image-placeholder">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <span>Your Image Here</span>
-        </div>
-      </div>
-      <div class="account-form-container">
-        <button class="account-modal-close" id="accountClose">&times;</button>
-        <h2 class="account-title">Login</h2>
-
-<form class="account-form" id="accountForm">
-  <div class="account-form-group">
-    <label>Email</label>
-    <input type="email" placeholder="Enter your email" required>
+  <!-- PAGE CONTAINER - Content changes here, navbar stays -->
+  <div id="app">
+    <!-- Pages will be injected here -->
   </div>
 
-  <div class="account-form-group">
-    <label>Password</label>
-    <input type="password" placeholder="Enter your password" required>
-  </div>
-
-  <button type="submit" class="btn btn-primary btn-full">
-    SIGN IN
-  </button>
-</form>
-
-<div class="account-links">
-  <a href="#" class="forgot-password">Forgot your password?</a>
-</div>
-
-<div class="account-signup">
-  <p>Don't have an account? <a href="#" class="signup-link">Sign up!</a></p>
-</div>
-          <div class="account-form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-          </div>
-          <div class="account-form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">SIGN IN</button>
-        </form>
-        <div class="account-links">
-          <a href="#" class="forgot-password">Forgot your password?</a>
-        </div>
-        <div class="account-signup">
-          <p>Don't have an account? <a href="#" class="signup-link">Sign up!</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="logo">BO Organics</h3>
-          <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#shop">Shop All</a></li>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Shipping & Returns</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Contact</h4>
-          <ul>
-            <li>hello@boorganics.com</li>
-            <li>(555) 123-4567</li>
-            <li>Mon - Fri, 9am - 5pm</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 BO Organics. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Cart Sidebar -->
+  <!-- Cart Sidebar (STATIC) -->
   <div class="cart-overlay" id="cartOverlay"></div>
   <div class="cart-sidebar" id="cartSidebar">
     <div class="cart-header">
@@ -516,50 +72,12 @@
         <span>Total</span>
         <span id="cartTotal">$0.00</span>
       </div>
-      <button class="btn btn-primary btn-full">Checkout</button>
+      <button class="btn btn-primary btn-full" id="cartCheckoutBtn">Checkout</button>
     </div>
   </div>
 
-
-  <!-- About Modal -->
-  <div class="about-overlay" id="aboutOverlay"></div>
-  <div class="about-modal" id="aboutModal">
-    <div class="about-modal-header">
-      <h2>Our Story</h2>
-      <button class="about-modal-close" id="aboutClose">&times;</button>
-    </div>
-    <div class="about-modal-content">
-      <div class="about-image">
-        <div class="about-image-placeholder">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          <span>BO Organics</span>
-        </div>
-      </div>
-      <div class="about-text-content">
-        <h2 class="section-title">Beauty Born From Intention</h2>
-        <p class="about-text">BO Organics was founded with a simple belief: your skin deserves the same purity as the food you eat. We source the finest organic botanicals from sustainable farms around the world, crafting each product by hand in small batches.</p>
-        <p class="about-text">Every ingredient is chosen with intention. Every formula is designed to work in harmony with your skin's natural balance. No fillers. No toxins. Just the transformative power of nature.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Organic Ingredients</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">10K+</span>
-            <span class="stat-label">Happy Customers</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Natural Formulas</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <script src="product-detail.js"></script>
+  <script src="pages.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
