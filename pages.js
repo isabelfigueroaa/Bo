@@ -835,7 +835,7 @@ function getJoinBoPage() {
           <p class="section-description center">A clean beauty brand powered by community. Discover better products, connect through shared values, and grow something you believe in.</p>
         </div>
 
-        <div class="joinbo-grid">
+        <div class="experience-grid">
           <div class="experience-card">
             <div class="experience-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
