@@ -76,7 +76,18 @@ function getHomePage() {
         <h1 class="hero-title">Nourish Your Skin<br>With Nature's Finest</h1>
         <p class="hero-description">Handcrafted organic skincare made with ethically sourced botanicals. No synthetics. No compromises. Just pure, radiant beauty.</p>
         <div class="hero-buttons">
-          <a href="#/shop" class="btn btn-primary">Shop Now</a>
+          <div class="shop-dropdown-group">
+            <a href="#/shop" class="btn btn-primary">Shop Now</a>
+            <div class="shop-dropdown-menu">
+              <a href="#/shop" class="shop-dropdown-item" data-filter="all">All Products</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="new">New Arrivals</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="face">Face Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="body">Body Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="eyes">Eye Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="hair">Hair Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="sets">Sets & Bundles</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
