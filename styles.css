@@ -48,7 +48,7 @@ body {
   top: calc(100% + 0px);
   left: -20px;
   right: -20px;
-  background: white;
+  background: var(--bg-light);
   border-top: 1px solid var(--border);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -76,7 +76,7 @@ body {
   text-decoration: none;
   transition: all 0.2s ease;
   font-size: 0.95rem;
-  border-right: 1px solid var(--border);
+  border-right: none;
   flex-shrink: 0;
   font-weight: 500;
 }
@@ -86,9 +86,8 @@ body {
 }
 
 .nav-dropdown-item:hover {
-  background: var(--bg-light);
+  background: var(--cream);
   color: var(--burgundy);
-  padding-bottom: 16px;
 }
 
 /* ===== SHOP DROPDOWN STYLES ===== */
