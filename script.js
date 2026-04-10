@@ -116,6 +116,9 @@ function renderPage(route) {
     case 'login':
       html = getLoginPage();
       break;
+    case 'product':
+      html = getProductDetailPage(param);
+      break;
     default:
       html = getHomePage();
   }
@@ -256,6 +259,33 @@ function attachEventListeners() {
       // Button feedback
       const originalText = btn.textContent;
       btn.textContent = 'Added!';
+      btn.style.background = '#2d6a2e';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+      }, 1000);
+    });
+  });
+
+  // ---- Add to Cart from Detail Page ----
+  document.querySelectorAll('.add-to-cart-detail').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const productId = btn.dataset.productId;
+      const name = btn.dataset.name;
+      const price = parseFloat(btn.dataset.price);
+
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+
+      updateCart();
+
+      // Button feedback
+      const originalText = btn.textContent;
+      btn.textContent = 'Added to Cart!';
       btn.style.background = '#2d6a2e';
       setTimeout(() => {
         btn.textContent = originalText;
