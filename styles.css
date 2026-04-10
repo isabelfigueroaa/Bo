@@ -2296,7 +2296,7 @@ p { margin-bottom: 1.2rem; }
 }
 
 .hero-title {
-  animation: fadeSlideUp 1s ease 0.5s both, float 4s ease-in-out 1.5s infinite;
+  animation: fadeSlideUp 1s ease 0.5s both;
   animation-play-state: running;
 }
 
@@ -2714,12 +2714,13 @@ p { margin-bottom: 1.2rem; }
 
 /* ===== LOGIN PAGE ===== */
 .login-container {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--cream);
-  padding: 40px 20px;
+  padding: 100px 20px;
+  margin-top: 60px;
 }
 
 .login-box {
