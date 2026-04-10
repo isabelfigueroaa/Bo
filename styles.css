@@ -4047,11 +4047,13 @@ p { margin-bottom: 1.2rem; }
   gap: 30px;
   margin-bottom: 40px;
   flex-wrap: wrap;
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: 8px;
 }
 
 .shop-filters {
   flex: 1;
-  min-width: 300px;
 }
 
 .filter-section {
@@ -4175,6 +4177,7 @@ p { margin-bottom: 1.2rem; }
   .shop-controls {
     gap: 20px;
     margin-bottom: 35px;
+    padding: 20px;
   }
 
   .filter-buttons {
@@ -4200,6 +4203,7 @@ p { margin-bottom: 1.2rem; }
     align-items: stretch;
     gap: 20px;
     margin-bottom: 30px;
+    padding: 20px;
   }
 
   .shop-filters {
@@ -4233,6 +4237,7 @@ p { margin-bottom: 1.2rem; }
 @media (max-width: 480px) {
   .shop-controls {
     gap: 15px;
+    padding: 15px;
   }
 
   .filter-buttons {
