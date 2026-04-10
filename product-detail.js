@@ -12,6 +12,7 @@ const products = {
     benefits: ['Brightens and evens skin tone', 'Reduces appearance of fine lines', 'Boosts natural radiance', 'Lightweight and fast-absorbing'],
     usage: 'Apply 2-3 drops to clean skin in the morning and evening. Follow with your favorite moisturizer. For best results, use daily.',
     ingredients: 'Organic Rosehip Seed Oil, Vitamin C (L-Ascorbic Acid), Hyaluronic Acid, Jojoba Oil, Chamomile Extract',
+    images: ['Images/radiance-face-serum-1.jpg', 'Images/radiance-face-serum-2.jpg', 'Images/radiance-face-serum-3.jpg'],
     related: ['botanical-cleansing-oil', 'hydra-bloom-moisturizer']
   },
   'botanical-cleansing-oil': {
@@ -22,6 +23,7 @@ const products = {
     benefits: ['Effectively removes makeup & impurities', 'Gentle on sensitive skin', 'Leaves skin soft and glowing', 'Balances natural oil production'],
     usage: 'Massage a small amount into dry skin for 1-2 minutes. Add a splash of water to emulsify. Rinse thoroughly with warm water.',
     ingredients: 'Organic Jojoba Oil, Chamomile Extract, Vitamin E, Sweet Almond Oil',
+    images: ['Images/botanical-cleansing-oil-1.jpg', 'Images/botanical-cleansing-oil-2.jpg', 'Images/botanical-cleansing-oil-3.jpg'],
     related: ['radiance-face-serum', 'hydra-bloom-moisturizer']
   },
   'hydra-bloom-moisturizer': {
@@ -32,6 +34,7 @@ const products = {
     benefits: ['Deep hydration that lasts 24 hours', 'Plumps and smooths fine lines', 'Reduces redness and inflammation', 'Perfect for all skin types'],
     usage: 'Apply to clean, damp skin in the morning and evening. Use a small amount and gently massage into face and neck.',
     ingredients: 'Organic Hyaluronic Acid, Aloe Vera Extract, Shea Butter, Jojoba Oil, Chamomile',
+    images: ['Images/hydra-bloom-moisturizer-1.jpg', 'Images/hydra-bloom-moisturizer-2.jpg', 'Images/hydra-bloom-moisturizer-3.jpg'],
     related: ['radiance-face-serum', 'botanical-cleansing-oil']
   },
   'nourishing-body-butter': {
@@ -42,6 +45,7 @@ const products = {
     benefits: ['Deeply moisturizes dry skin', 'Delightful lavender fragrance', 'Non-greasy formula', 'Long-lasting hydration'],
     usage: 'Apply to damp skin immediately after showering. Focus on elbows, knees, and other dry areas.',
     ingredients: 'Organic Cocoa Butter, Lavender Oil, Shea Butter, Sweet Almond Oil, Vitamin E',
+    images: ['Images/nourishing-body-butter-1.jpg', 'Images/nourishing-body-butter-2.jpg', 'Images/nourishing-body-butter-3.jpg'],
     related: ['calming-body-oil', 'complete-glow-set']
   },
   'calming-body-oil': {
@@ -52,6 +56,7 @@ const products = {
     benefits: ['Deeply nourishing and hydrating', 'Calming essential oil blend', 'Promotes relaxation', 'Absorbs quickly without leaving residue'],
     usage: 'Apply to clean, damp skin and massage gently. Can be used on face, body, and hair.',
     ingredients: 'Organic Argan Oil, Sweet Almond Oil, Lavender Oil, Chamomile Oil',
+    images: ['Images/calming-body-oil-1.jpg', 'Images/calming-body-oil-2.jpg', 'Images/calming-body-oil-3.jpg'],
     related: ['nourishing-body-butter', 'body-care-collection']
   },
   'delicate-eye-contour': {
@@ -62,6 +67,7 @@ const products = {
     benefits: ['Reduces puffiness and dark circles', 'Minimizes fine lines and wrinkles', 'Brightens the eye area', 'Gentle enough for daily use'],
     usage: 'Apply a small amount around the eye contour using your ring finger. Gently pat (do not rub) until absorbed.',
     ingredients: 'Caffeine Extract, Peptides, Hyaluronic Acid, Aloe Vera, Shea Butter',
+    images: ['Images/delicate-eye-contour-1.jpg', 'Images/delicate-eye-contour-2.jpg', 'Images/delicate-eye-contour-3.jpg'],
     related: ['radiance-face-serum', 'hydra-bloom-moisturizer']
   },
   'nourishing-hair-elixir': {
@@ -72,6 +78,7 @@ const products = {
     benefits: ['Restores natural shine', 'Repairs damaged hair', 'Adds elasticity and softness', 'Tames frizz'],
     usage: 'Apply a small amount to damp or dry hair, focusing on mid-lengths and ends. Style as usual.',
     ingredients: 'Organic Argan Oil, Lavender Oil, Rosemary Oil, Jojoba Oil, Vitamin E',
+    images: ['Images/nourishing-hair-elixir-1.jpg', 'Images/nourishing-hair-elixir-2.jpg', 'Images/nourishing-hair-elixir-3.jpg'],
     related: ['nourishing-body-butter', 'calming-body-oil']
   },
   'complete-glow-set': {
@@ -82,6 +89,7 @@ const products = {
     benefits: ['Complete skincare routine in one set', 'Save 10% compared to individual purchases', 'Perfect for beginners', 'Travel-friendly sizes'],
     usage: 'Use as part of your daily skincare routine. Cleanse, apply serum, then moisturize.',
     ingredients: 'Multiple organic ingredients - see individual products',
+    images: ['Images/complete-glow-set-1.jpg', 'Images/complete-glow-set-2.jpg', 'Images/complete-glow-set-3.jpg'],
     related: ['radiance-face-serum', 'botanical-cleansing-oil', 'hydra-bloom-moisturizer']
   },
   'body-care-collection': {
@@ -92,6 +100,7 @@ const products = {
     benefits: ['Complete body care system', 'Save on bundle pricing', 'Luxury spa experience at home', 'Perfect gift set'],
     usage: 'Use in sequence: exfoliate 2-3 times weekly, apply oil or butter daily.',
     ingredients: 'Multiple organic ingredients - see individual products',
+    images: ['Images/body-care-collection-1.jpg', 'Images/body-care-collection-2.jpg', 'Images/body-care-collection-3.jpg'],
     related: ['nourishing-body-butter', 'calming-body-oil']
   }
 };

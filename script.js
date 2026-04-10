@@ -487,6 +487,73 @@ function attachEventListeners() {
 
   // Update wishlist UI to show current state
   updateWishlistUI();
+
+  // ---- Image Gallery ----
+  const galleryMainImage = document.getElementById('galleryMainImage');
+  const galleryFallback = document.getElementById('galleryFallback');
+  const galleryThumbnails = document.querySelectorAll('.gallery-thumbnail');
+  const galleryPrev = document.getElementById('galleryPrev');
+  const galleryNext = document.getElementById('galleryNext');
+
+  if (galleryMainImage && galleryThumbnails.length > 0) {
+    let currentImageIndex = 0;
+
+    // Function to switch image
+    function switchImage(index) {
+      if (index < 0 || index >= galleryThumbnails.length) return;
+
+      currentImageIndex = index;
+
+      // Update thumbnails active state
+      galleryThumbnails.forEach((thumb, i) => {
+        if (i === index) {
+          thumb.classList.add('active');
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+
+      // Update main image
+      const imgElement = galleryThumbnails[index].querySelector('img');
+      if (imgElement && imgElement.src && imgElement.style.display !== 'none') {
+        galleryMainImage.src = imgElement.src;
+        galleryMainImage.style.display = 'block';
+        if (galleryFallback) galleryFallback.style.display = 'none';
+      } else {
+        galleryMainImage.style.display = 'none';
+        if (galleryFallback) galleryFallback.style.display = 'flex';
+      }
+
+      // Scroll thumbnail into view
+      galleryThumbnails[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    }
+
+    // Thumbnail click handler
+    galleryThumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => {
+        switchImage(index);
+      });
+    });
+
+    // Previous button
+    if (galleryPrev) {
+      galleryPrev.addEventListener('click', () => {
+        switchImage(currentImageIndex - 1);
+      });
+    }
+
+    // Next button
+    if (galleryNext) {
+      galleryNext.addEventListener('click', () => {
+        switchImage(currentImageIndex + 1);
+      });
+    }
+
+    // Initialize - set first thumbnail as active
+    if (galleryThumbnails.length > 0) {
+      galleryThumbnails[0].classList.add('active');
+    }
+  }
 }
 
 // ---- Hash Route Change Listener ----
