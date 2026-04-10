@@ -50,6 +50,46 @@ function getProductDetailPage(productId) {
       usage: 'Apply to damp skin and massage in.',
       ingredients: 'Organic Chamomile Extract, Lavender Oil, Sweet Almond Oil',
       images: ['Images/calming-body-oil-1.jpg', 'Images/calming-body-oil-2.jpg', 'Images/calming-body-oil-3.jpg']
+    },
+    'delicate-eye-contour': {
+      name: 'Delicate Eye Contour',
+      category: 'Eye Care',
+      price: 54.00,
+      description: 'Caffeine & peptide-infused cream to reduce puffiness and fine lines.',
+      benefits: ['Reduces puffiness and dark circles', 'Minimizes fine lines and wrinkles', 'Brightens the eye area', 'Gentle enough for daily use'],
+      usage: 'Apply a small amount around the eye contour using your ring finger. Gently pat (do not rub) until absorbed.',
+      ingredients: 'Caffeine Extract, Peptides, Hyaluronic Acid, Aloe Vera, Shea Butter',
+      images: ['Images/delicate-eye-contour-1.jpg', 'Images/delicate-eye-contour-2.jpg', 'Images/delicate-eye-contour-3.jpg']
+    },
+    'nourishing-hair-elixir': {
+      name: 'Nourishing Hair Elixir',
+      category: 'Hair Care',
+      price: 44.00,
+      description: 'Argan oil & botanical extracts to restore shine and elasticity.',
+      benefits: ['Restores natural shine', 'Repairs damaged hair', 'Adds elasticity and softness', 'Tames frizz'],
+      usage: 'Apply a small amount to damp or dry hair, focusing on mid-lengths and ends. Style as usual.',
+      ingredients: 'Organic Argan Oil, Lavender Oil, Rosemary Oil, Jojoba Oil, Vitamin E',
+      images: ['Images/nourishing-hair-elixir-1.jpg', 'Images/nourishing-hair-elixir-2.jpg', 'Images/nourishing-hair-elixir-3.jpg']
+    },
+    'complete-glow-set': {
+      name: 'Complete Glow Set',
+      category: 'Sets & Bundles',
+      price: 115.00,
+      description: 'Face serum, cleansing oil & moisturizer – everything you need for a complete skincare routine.',
+      benefits: ['Complete skincare routine in one set', 'Save 10% compared to individual purchases', 'Perfect for beginners', 'Travel-friendly sizes'],
+      usage: 'Use as part of your daily skincare routine. Cleanse, apply serum, then moisturize.',
+      ingredients: 'Multiple organic ingredients - see individual products',
+      images: ['Images/complete-glow-set-1.jpg', 'Images/complete-glow-set-2.jpg', 'Images/complete-glow-set-3.jpg']
+    },
+    'body-care-collection': {
+      name: 'Body Care Collection',
+      category: 'Sets & Bundles',
+      price: 98.00,
+      description: 'Body butter, body oil & exfoliating scrub for total body care.',
+      benefits: ['Complete body care system', 'Save on bundle pricing', 'Luxury spa experience at home', 'Perfect gift set'],
+      usage: 'Use in sequence: exfoliate 2-3 times weekly, apply oil or butter daily.',
+      ingredients: 'Multiple organic ingredients - see individual products',
+      images: ['Images/body-care-collection-1.jpg', 'Images/body-care-collection-2.jpg', 'Images/body-care-collection-3.jpg']
     }
   };
 
