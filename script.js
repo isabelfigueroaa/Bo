@@ -554,6 +554,30 @@ function attachEventListeners() {
       galleryThumbnails[0].classList.add('active');
     }
   }
+
+  // ---- Related Products Navigation ----
+  document.querySelectorAll('.related-product-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Don't navigate if clicking wishlist button
+      if (e.target.closest('.wishlist-btn')) {
+        return;
+      }
+      const productId = card.dataset.productId;
+      if (productId) {
+        window.location.hash = `#/product/${productId}`;
+      }
+    });
+  });
+
+  document.querySelectorAll('.view-details-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const productId = btn.dataset.productId;
+      if (productId) {
+        window.location.hash = `#/product/${productId}`;
+      }
+    });
+  });
 }
 
 // ---- Hash Route Change Listener ----

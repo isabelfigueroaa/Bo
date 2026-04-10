@@ -82,5 +82,28 @@ function getProductDetailPage(productId) {
 
   html += '</ul></div><div class="product-detail-usage"><h3>How to Use</h3><p>' + product.usage + '</p></div><div class="product-detail-ingredients"><h3>Ingredients</h3><p>' + product.ingredients + '</p></div><div class="product-detail-actions"><button class="btn btn-primary add-to-cart-detail" data-product-id="' + productId + '" data-name="' + product.name + '" data-price="' + product.price + '">Add to Cart</button></div></div></div></div></div>';
 
+  // Related Products Section
+  html += '<section class="related-products-section"><div class="container"><p class="section-label">You Might Also Like</p><h2 class="section-title">Related Products</h2><div class="related-products-grid">';
+
+  // Find related products by category
+  const relatedProducts = Object.values(products)
+    .filter(p => p.category === product.category && p.name !== product.name)
+    .slice(0, 4);
+
+  if (relatedProducts.length > 0) {
+    relatedProducts.forEach(relatedProduct => {
+      const relatedId = Object.keys(products).find(key => products[key].name === relatedProduct.name);
+      const relatedImage = relatedProduct.images && relatedProduct.images.length > 0 ? relatedProduct.images[0] : '';
+
+      html += '<div class="related-product-card" data-product-id="' + relatedId + '" style="cursor: pointer;"><button class="wishlist-btn" data-product-id="' + relatedId + '" aria-label="Add to wishlist"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button><div class="related-product-image"><img src="' + relatedImage + '" alt="' + relatedProduct.name + '" style="display: ' + (relatedImage ? 'block' : 'none') + '"><div class="product-image-placeholder" style="display: ' + (relatedImage ? 'none' : 'flex') + '"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg></div></div><div class="related-product-info"><h3 class="related-product-name">' + relatedProduct.name + '</h3><p class="related-product-category">' + relatedProduct.category + '</p><p class="related-product-price">$' + relatedProduct.price.toFixed(2) + '</p><button class="btn btn-primary btn-sm view-details-btn" data-product-id="' + relatedId + '">View Details</button></div></div>';
+    });
+  } else {
+    html += '<p class="no-related">No related products found in this category</p>';
+  }
+
+  html += '</div></section>';
+
+  html += '<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3 class="logo">BO Organics</h3><p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#/shop">Shop All</a></li><li><a href="#/about">Our Story</a></li><li><a href="#/ingredients">Ingredients</a></li></ul></div></div></div></footer>';
+
   return html;
 }
