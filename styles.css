@@ -604,8 +604,8 @@ p { margin-bottom: 1.2rem; }
 
 .product-badge {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 12px;
+  left: 12px;
   background: var(--burgundy);
   color: var(--cream);
   padding: 6px 12px;
@@ -2562,10 +2562,7 @@ p { margin-bottom: 1.2rem; }
   transform: scale(1.1);
 }
 
-/* Animate badges */
-.product-badge {
-  animation: rotate-badge 3s ease-in-out infinite;
-}
+/* Badges styling - animation removed */
 
 .add-to-cart {
   transition: background 0.3s, color 0.3s, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
