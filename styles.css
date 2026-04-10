@@ -37,6 +37,57 @@ body {
   padding-top: 80px;
 }
 
+/* ===== SHOP DROPDOWN STYLES ===== */
+
+.shop-dropdown-group {
+  position: relative;
+  display: inline-block;
+}
+
+.shop-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.shop-dropdown-group:hover .shop-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.shop-dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.shop-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.shop-dropdown-item:hover {
+  background: var(--bg-light);
+  color: var(--burgundy);
+  padding-left: 20px;
+}
+
 /* Add padding to non-hero pages */
 #app .shop-page,
 #app .about-page,
@@ -3282,6 +3333,7 @@ p { margin-bottom: 1.2rem; }
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .wishlist-item:hover {

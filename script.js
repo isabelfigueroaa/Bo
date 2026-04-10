@@ -451,6 +451,19 @@ function attachEventListeners() {
     });
   });
 
+  // ---- Wishlist Item Click (navigate to detail page) ----
+  document.querySelectorAll('.wishlist-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      if (e.target.closest('.wishlist-remove') || e.target.closest('.add-to-cart')) {
+        return; // Don't navigate if clicking remove or add-to-cart button
+      }
+      const productId = item.dataset.productId;
+      if (productId) {
+        window.location.hash = `#/product/${productId}`;
+      }
+    });
+  });
+
   // ---- Product Card Click (navigate to detail page) ----
   document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('click', (e) => {
