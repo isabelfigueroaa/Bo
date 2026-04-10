@@ -240,24 +240,91 @@ function attachEventListeners() {
   // ---- Product Filter (Shop Page) ----
   const filterBtns = document.querySelectorAll('.filter-btn:not(.search-filter-btn)');
   const productCards = document.querySelectorAll('.product-card:not(.search-result-card)');
+  const sortDropdown = document.getElementById('sortDropdown');
+  let currentFilter = 'all';
+  let currentSort = 'featured';
 
+  // Sort products function
+  function sortAndDisplayProducts() {
+    // Get visible product cards based on current filter
+    const visibleCards = Array.from(productCards).filter(card => {
+      return card.style.display !== 'none';
+    });
+
+    // Extract product data for sorting
+    const productsData = visibleCards.map(card => {
+      const name = card.querySelector('.product-name').textContent;
+      const priceText = card.querySelector('.product-price').textContent;
+      const price = parseFloat(priceText.replace('$', ''));
+      return { card, name, price };
+    });
+
+    // Sort based on selected sort type
+    switch (currentSort) {
+      case 'price-low-high':
+        productsData.sort((a, b) => a.price - b.price);
+        break;
+      case 'price-high-low':
+        productsData.sort((a, b) => b.price - a.price);
+        break;
+      case 'name-az':
+        productsData.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'name-za':
+        productsData.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case 'newest':
+        // Products with 'new' badge come first
+        productsData.sort((a, b) => {
+          const aIsNew = a.card.querySelector('.product-badge')?.textContent.includes('New') ? 1 : 0;
+          const bIsNew = b.card.querySelector('.product-badge')?.textContent.includes('New') ? 1 : 0;
+          return bIsNew - aIsNew;
+        });
+        break;
+      case 'featured':
+      default:
+        // Keep original order (featured)
+        break;
+    }
+
+    // Reorder cards in the grid
+    const grid = document.querySelector('.products-grid');
+    if (grid) {
+      productsData.forEach(item => {
+        grid.appendChild(item.card);
+        item.card.style.animation = 'fadeUp 0.5s ease forwards';
+      });
+    }
+  }
+
+  // Filter button handler
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const filter = btn.dataset.filter;
+      currentFilter = btn.dataset.filter;
 
       productCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category.includes(filter)) {
+        if (currentFilter === 'all' || card.dataset.category.includes(currentFilter)) {
           card.style.display = '';
-          card.style.animation = 'fadeUp 0.5s ease forwards';
         } else {
           card.style.display = 'none';
         }
       });
+
+      // Re-apply sort after filtering
+      sortAndDisplayProducts();
     });
   });
+
+  // Sort dropdown handler
+  if (sortDropdown) {
+    sortDropdown.addEventListener('change', (e) => {
+      currentSort = e.target.value;
+      sortAndDisplayProducts();
+    });
+  }
 
   // ---- Search Results Filter ----
   const searchFilterBtns = document.querySelectorAll('.search-filter-btn');

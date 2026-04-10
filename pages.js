@@ -454,19 +454,33 @@ function getShopPage() {
           <p class="section-description">Thoughtfully crafted essentials for your daily ritual</p>
         </div>
 
-        <!-- Filters -->
-        <div class="shop-filters">
-          <div class="filter-section">
-            <h3 class="filter-title">Filter by Type</h3>
-            <div class="filter-buttons">
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="new">New Arrivals</button>
-              <button class="filter-btn" data-filter="face">Face Care</button>
-              <button class="filter-btn" data-filter="body">Body Care</button>
-              <button class="filter-btn" data-filter="eyes">Eye Care</button>
-              <button class="filter-btn" data-filter="hair">Hair Care</button>
-              <button class="filter-btn" data-filter="sets">Sets & Bundles</button>
+        <!-- Filters & Sort -->
+        <div class="shop-controls">
+          <div class="shop-filters">
+            <div class="filter-section">
+              <h3 class="filter-title">Filter by Type</h3>
+              <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+                <button class="filter-btn" data-filter="face">Face Care</button>
+                <button class="filter-btn" data-filter="body">Body Care</button>
+                <button class="filter-btn" data-filter="eyes">Eye Care</button>
+                <button class="filter-btn" data-filter="hair">Hair Care</button>
+                <button class="filter-btn" data-filter="sets">Sets & Bundles</button>
+              </div>
             </div>
+          </div>
+
+          <div class="sort-section">
+            <label for="sortDropdown" class="sort-label">Sort by:</label>
+            <select id="sortDropdown" class="sort-dropdown">
+              <option value="featured">Featured</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="name-az">Name: A to Z</option>
+              <option value="name-za">Name: Z to A</option>
+              <option value="newest">Newest</option>
+            </select>
           </div>
         </div>
 
