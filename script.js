@@ -8,6 +8,9 @@ let cart = [];
 // ---- Wishlist (Persistent State) ----
 let wishlist = [];
 
+// ---- Search State ----
+let currentSearchTerm = '';
+
 // Initialize wishlist from localStorage
 function initializeWishlist() {
   const saved = localStorage.getItem('boWishlist');
@@ -150,6 +153,9 @@ function renderPage(route) {
     case 'wishlist':
       html = getWishlistPage();
       break;
+    case 'search':
+      html = getSearchResultsPage(param ? decodeURIComponent(param) : currentSearchTerm);
+      break;
     case 'product':
       html = getProductDetailPage(param);
       break;
@@ -159,6 +165,14 @@ function renderPage(route) {
 
   // Inject HTML into app container
   appContainer.innerHTML = html;
+
+  // Clear search input if not on search page
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput && page !== 'search') {
+    searchInput.value = '';
+  } else if (searchInput && page === 'search' && param) {
+    searchInput.value = decodeURIComponent(param);
+  }
 
   // Scroll to top
   window.scrollTo(0, 0);
@@ -223,9 +237,9 @@ function attachEventListeners() {
     });
   }
 
-  // ---- Product Filter ----
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('.product-card');
+  // ---- Product Filter (Shop Page) ----
+  const filterBtns = document.querySelectorAll('.filter-btn:not(.search-filter-btn)');
+  const productCards = document.querySelectorAll('.product-card:not(.search-result-card)');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -245,6 +259,28 @@ function attachEventListeners() {
     });
   });
 
+  // ---- Search Results Filter ----
+  const searchFilterBtns = document.querySelectorAll('.search-filter-btn');
+  const searchResultCards = document.querySelectorAll('.search-result-card');
+
+  searchFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      searchFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      searchResultCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category.includes(filter)) {
+          card.style.display = '';
+          card.style.animation = 'fadeUp 0.5s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
   // ---- Product Search ----
   const searchInput = document.getElementById('searchInput');
   const searchBtn = document.getElementById('searchBtn');
@@ -254,28 +290,12 @@ function attachEventListeners() {
       const searchTerm = searchInput.value.toLowerCase().trim();
 
       if (searchTerm === '') {
-        productCards.forEach(card => {
-          card.style.display = '';
-        });
         return;
       }
 
-      productCards.forEach(card => {
-        const productName = card.querySelector('.product-name').textContent.toLowerCase();
-        const productDesc = card.querySelector('.product-desc').textContent.toLowerCase();
-
-        if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
-          card.style.display = '';
-          card.style.animation = 'fadeUp 0.5s ease forwards';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      // Navigate to shop
-      if (window.location.hash !== '#/shop') {
-        window.location.hash = '#/shop';
-      }
+      // Store search term and navigate to search results page
+      currentSearchTerm = searchTerm;
+      window.location.hash = '#/search/' + encodeURIComponent(searchTerm);
     }
 
     searchInput.addEventListener('keypress', (e) => {
@@ -284,7 +304,6 @@ function attachEventListeners() {
       }
     });
 
-    searchInput.addEventListener('input', performSearch);
     searchBtn.addEventListener('click', performSearch);
   }
 

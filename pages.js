@@ -1251,6 +1251,140 @@ function getWishlistPage() {
   return html;
 }
 
+// SEARCH RESULTS PAGE
+function getSearchResultsPage(searchTerm) {
+  // Product database
+  const allProducts = [
+    { id: 'radiance-face-serum', name: 'Radiance Face Serum', price: 48.00, category: 'Face Care', description: 'Rosehip & Vitamin C brightening serum for luminous, even-toned skin' },
+    { id: 'botanical-cleansing-oil', name: 'Botanical Cleansing Oil', price: 36.00, category: 'Face Care', description: 'Gentle jojoba & chamomile oil cleanser that melts away impurities' },
+    { id: 'hydra-bloom-moisturizer', name: 'Hydra-Bloom Moisturizer', price: 42.00, category: 'Face Care', description: 'Deep hydration with hyaluronic acid, aloe vera & shea butter' },
+    { id: 'nourishing-body-butter', name: 'Nourishing Body Butter', price: 32.00, category: 'Body Care', description: 'Rich cocoa butter & lavender body cream for silky smooth skin' },
+    { id: 'calming-body-oil', name: 'Calming Body Oil', price: 38.00, category: 'Body Care', description: 'Argan & sweet almond oil infused with calming essential oils' },
+    { id: 'delicate-eye-contour', name: 'Delicate Eye Contour', price: 54.00, category: 'Eye Care', description: 'Caffeine & peptide-infused cream to reduce puffiness and fine lines' },
+    { id: 'nourishing-hair-elixir', name: 'Nourishing Hair Elixir', price: 44.00, category: 'Hair Care', description: 'Argan oil & botanical extracts to restore shine and elasticity' },
+    { id: 'complete-glow-set', name: 'Complete Glow Set', price: 115.00, category: 'Sets & Bundles', description: 'Face serum, cleansing oil & moisturizer – everything you need' },
+    { id: 'body-care-collection', name: 'Body Care Collection', price: 98.00, category: 'Sets & Bundles', description: 'Body butter, body oil & exfoliating scrub for total body care' }
+  ];
+
+  // Search through products
+  const searchLower = searchTerm.toLowerCase();
+  const results = allProducts.filter(product =>
+    product.name.toLowerCase().includes(searchLower) ||
+    product.description.toLowerCase().includes(searchLower) ||
+    product.category.toLowerCase().includes(searchLower)
+  );
+
+  let html = `
+    <section class="search-page" id="search-results">
+      <div class="container">
+        <div class="search-header">
+          <a href="#/shop" class="back-link">← Back to Shop</a>
+          <h1 class="section-title">Search Results</h1>
+          <p class="search-term">Results for "<strong>${searchTerm}</strong>"</p>
+          <p class="results-count">${results.length} product${results.length !== 1 ? 's' : ''} found</p>
+        </div>
+  `;
+
+  if (results.length === 0) {
+    html += `
+      <div class="search-empty">
+        <div class="empty-state">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <h2>No results found</h2>
+          <p>We couldn't find any products matching "${searchTerm}"</p>
+          <p class="suggestions">Try searching with different keywords or browse our full collection</p>
+          <a href="#/shop" class="btn btn-primary">Browse All Products</a>
+        </div>
+      </div>
+    `;
+  } else {
+    html += `
+      <div class="search-filters">
+        <div class="filter-section">
+          <h3 class="filter-title">Filter Results</h3>
+          <div class="filter-buttons">
+            <button class="filter-btn search-filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn search-filter-btn" data-filter="face">Face Care</button>
+            <button class="filter-btn search-filter-btn" data-filter="body">Body Care</button>
+            <button class="filter-btn search-filter-btn" data-filter="eyes">Eye Care</button>
+            <button class="filter-btn search-filter-btn" data-filter="hair">Hair Care</button>
+            <button class="filter-btn search-filter-btn" data-filter="sets">Sets & Bundles</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results-grid">
+    `;
+
+    // Map category names to data-category values
+    const categoryMap = {
+      'Face Care': 'face',
+      'Body Care': 'body',
+      'Eye Care': 'eyes',
+      'Hair Care': 'hair',
+      'Sets & Bundles': 'sets'
+    };
+
+    results.forEach(product => {
+      const dataCategory = categoryMap[product.category] || '';
+      html += `
+        <div class="product-card search-result-card" data-category="${dataCategory}" style="cursor: pointer;">
+          <button class="wishlist-btn" data-product-id="${product.id}" aria-label="Add to wishlist">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <div class="product-image">
+            <div class="product-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-desc">${product.description}</p>
+            <div class="product-footer">
+              <span class="product-price">$${product.price.toFixed(2)}</span>
+              <button class="add-to-cart" data-product-id="${product.id}" data-name="${product.name}" data-price="${product.price}" onclick="event.stopPropagation();">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    html += `
+      </div>
+    `;
+  }
+
+  html += `
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="logo">BO Organics</h3>
+            <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#/shop">Shop All</a></li>
+              <li><a href="#/about">Our Story</a></li>
+              <li><a href="#/ingredients">Ingredients</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  `;
+
+  return html;
+}
+
 // PRODUCT DETAIL PAGE
 function getProductDetailPage(productId) {
   const products = {
