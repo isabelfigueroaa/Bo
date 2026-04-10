@@ -474,6 +474,11 @@ function getShopPage() {
         <div class="products-grid" id="productsGrid">
           <div class="product-card" data-category="face" style="cursor: pointer;">
             <div class="product-badge">Bestseller</div>
+            <button class="wishlist-btn" data-product-id="radiance-face-serum" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
@@ -490,6 +495,11 @@ function getShopPage() {
           </div>
 
           <div class="product-card" data-category="face" style="cursor: pointer;">
+            <button class="wishlist-btn" data-product-id="botanical-cleansing-oil" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
@@ -507,6 +517,11 @@ function getShopPage() {
 
           <div class="product-card" data-category="face new" style="cursor: pointer;">
             <div class="product-badge new">New</div>
+            <button class="wishlist-btn" data-product-id="hydra-bloom-moisturizer" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
@@ -523,6 +538,11 @@ function getShopPage() {
           </div>
 
           <div class="product-card" data-category="body" style="cursor: pointer;">
+            <button class="wishlist-btn" data-product-id="nourishing-body-butter" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
@@ -540,6 +560,11 @@ function getShopPage() {
 
           <div class="product-card" data-category="body" style="cursor: pointer;">
             <div class="product-badge">Popular</div>
+            <button class="wishlist-btn" data-product-id="calming-body-oil" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -557,6 +582,11 @@ function getShopPage() {
 
           <div class="product-card" data-category="eyes new" style="cursor: pointer;">
             <div class="product-badge new">New</div>
+            <button class="wishlist-btn" data-product-id="delicate-eye-contour" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -574,6 +604,11 @@ function getShopPage() {
 
           <div class="product-card" data-category="hair new" style="cursor: pointer;">
             <div class="product-badge new">New</div>
+            <button class="wishlist-btn" data-product-id="nourishing-hair-elixir" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9c0-3 2-5 6-5s6 2 6 5v3c0 2-1 4-3 4H9c-2 0-3-2-3-4V9z"/><path d="M9 16h6M8 20h8"/></svg>
@@ -591,6 +626,11 @@ function getShopPage() {
 
           <div class="product-card" data-category="sets" style="cursor: pointer;">
             <div class="product-badge">Bundle Deal</div>
+            <button class="wishlist-btn" data-product-id="complete-glow-set" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9l6-6 6 6"/><rect x="3" y="9" width="18" height="12" rx="2"/></svg>
@@ -607,6 +647,11 @@ function getShopPage() {
           </div>
 
           <div class="product-card" data-category="sets" style="cursor: pointer;">
+            <button class="wishlist-btn" data-product-id="body-care-collection" aria-label="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
             <div class="product-image">
               <div class="product-image-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9l6-6 6 6"/><rect x="3" y="9" width="18" height="12" rx="2"/></svg>
@@ -1108,6 +1153,102 @@ function getIngredientDetailPage(ingredientId) {
       </div>
     </footer>
   `;
+}
+
+// WISHLIST PAGE
+function getWishlistPage() {
+  // Get wishlist from global variable (set in script.js)
+  const wishlistProductIds = typeof wishlist !== 'undefined' ? wishlist : [];
+
+  // Product database (same as product detail page)
+  const allProducts = {
+    'radiance-face-serum': { name: 'Radiance Face Serum', price: 48.00, category: 'Face Care' },
+    'botanical-cleansing-oil': { name: 'Botanical Cleansing Oil', price: 36.00, category: 'Face Care' },
+    'hydra-bloom-moisturizer': { name: 'Hydra-Bloom Moisturizer', price: 42.00, category: 'Face Care' },
+    'nourishing-body-butter': { name: 'Nourishing Body Butter', price: 32.00, category: 'Body Care' },
+    'calming-body-oil': { name: 'Calming Body Oil', price: 38.00, category: 'Body Care' },
+    'delicate-eye-contour': { name: 'Delicate Eye Contour', price: 54.00, category: 'Eye Care' },
+    'nourishing-hair-elixir': { name: 'Nourishing Hair Elixir', price: 44.00, category: 'Hair Care' },
+    'complete-glow-set': { name: 'Complete Glow Set', price: 115.00, category: 'Sets & Bundles' },
+    'body-care-collection': { name: 'Body Care Collection', price: 98.00, category: 'Sets & Bundles' }
+  };
+
+  let html = `
+    <section class="wishlist-page" id="wishlist">
+      <div class="container">
+        <div class="wishlist-header">
+          <p class="section-label">My Favorites</p>
+          <h1 class="section-title">My Wishlist</h1>
+        </div>
+  `;
+
+  if (wishlistProductIds.length === 0) {
+    html += `
+      <div class="wishlist-empty">
+        <div class="empty-state">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <h2>Your wishlist is empty</h2>
+          <p>Add products to your wishlist to save them for later</p>
+          <a href="#/shop" class="btn btn-primary">Continue Shopping</a>
+        </div>
+      </div>
+    `;
+  } else {
+    html += '<div class="wishlist-grid">';
+
+    wishlistProductIds.forEach(productId => {
+      const product = allProducts[productId];
+      if (product) {
+        html += `
+          <div class="wishlist-item" data-product-id="${productId}">
+            <div class="wishlist-item-image">
+              <div class="product-image-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
+              </div>
+            </div>
+            <div class="wishlist-item-info">
+              <h3 class="wishlist-item-name">${product.name}</h3>
+              <p class="wishlist-item-category">${product.category}</p>
+              <p class="wishlist-item-price">$${product.price.toFixed(2)}</p>
+              <div class="wishlist-item-actions">
+                <button class="btn btn-primary add-to-cart" data-product-id="${productId}" data-name="${product.name}" data-price="${product.price}">Add to Cart</button>
+                <button class="btn btn-outline wishlist-remove" data-product-id="${productId}">Remove</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    });
+
+    html += '</div>';
+  }
+
+  html += `
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="logo">BO Organics</h3>
+            <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#/shop">Shop All</a></li>
+              <li><a href="#/about">Our Story</a></li>
+              <li><a href="#/ingredients">Ingredients</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  `;
+
+  return html;
 }
 
 // PRODUCT DETAIL PAGE
