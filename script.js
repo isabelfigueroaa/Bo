@@ -146,9 +146,10 @@ function attachEventListeners() {
       }
 
       // Parallax: hero content moves up and fades as you scroll
+      // Disabled: removed parallax movement
       if (heroContent && scrollY < window.innerHeight) {
         const progress = scrollY / window.innerHeight;
-        heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
+        // heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
         heroContent.style.opacity = 1 - progress * 1.2;
       }
     });
