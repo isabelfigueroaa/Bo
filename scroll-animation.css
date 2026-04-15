@@ -1,0 +1,114 @@
+/* ============================================
+   BO Organics — Scroll Animation Styles
+   ============================================ */
+
+.scroll-animation-wrapper {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.scroll-animation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* Header/Title styling */
+.scroll-animation-header {
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-animation-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Card container with scroll effect */
+.scroll-animation-card {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 10;
+  border: 2px solid #d4c5b9;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  /* Enable 3D transforms */
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.3s ease;
+}
+
+.scroll-animation-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Image inside card */
+.scroll-animation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-animation-container {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .scroll-animation-header {
+    margin-bottom: 60px;
+  }
+
+  .scroll-animation-header h2 {
+    font-size: 28px;
+  }
+
+  .scroll-animation-card {
+    aspect-ratio: 4 / 5;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-animation-wrapper {
+    padding: 20px 12px;
+  }
+
+  .scroll-animation-container {
+    padding: 30px 12px;
+  }
+
+  .scroll-animation-card {
+    aspect-ratio: 1 / 1.2;
+    border-width: 1px;
+  }
+
+  .scroll-animation-header h2 {
+    font-size: 22px;
+  }
+}
+
+/* Animation smoothing */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animation-card {
+    will-change: auto;
+  }
+}

@@ -136,6 +136,19 @@ function getHomePage() {
       </div>
     </section>
 
+    <!-- Scroll Animation Section -->
+    <div data-scroll-animation class="scroll-animation-wrapper">
+      <div class="scroll-animation-container">
+        <div class="scroll-animation-header">
+          <h2>Experience the BO Difference</h2>
+          <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to discover how our products transform your skincare routine</p>
+        </div>
+        <div class="scroll-animation-card" data-scroll-card>
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&h=600&fit=crop" alt="BO Organics skincare products" class="scroll-animation-image">
+        </div>
+      </div>
+    </div>
+
     <!-- Shop Section -->
     <section class="shop" id="shop">
       <div class="container">
@@ -457,6 +470,19 @@ function getHomePage() {
 // SHOP PAGE (Full page with all products and filters)
 function getShopPage() {
   return `
+    <!-- Scroll Animation: Shop Hero -->
+    <div data-scroll-animation class="scroll-animation-wrapper">
+      <div class="scroll-animation-container">
+        <div class="scroll-animation-header">
+          <h2>Our Bestselling Collection</h2>
+          <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to discover what makes our products special</p>
+        </div>
+        <div class="scroll-animation-card" data-scroll-card>
+          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&h=600&fit=crop" alt="BO Organics bestselling products" class="scroll-animation-image">
+        </div>
+      </div>
+    </div>
+
     <section class="shop-page" id="shop">
       <div class="container">
         <div class="shop-header">
@@ -795,6 +821,19 @@ function getAboutPage() {
       </div>
     </section>
 
+    <!-- Scroll Animation: About Section -->
+    <div data-scroll-animation class="scroll-animation-wrapper">
+      <div class="scroll-animation-container">
+        <div class="scroll-animation-header">
+          <h2>Crafted With Care</h2>
+          <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to see how we create your skincare</p>
+        </div>
+        <div class="scroll-animation-card" data-scroll-card>
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&h=600&fit=crop" alt="BO Organics crafting process" class="scroll-animation-image">
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
@@ -918,6 +957,19 @@ function getIngredientsPage() {
         </div>
       </div>
     </section>
+
+    <!-- Scroll Animation: Ingredients Section -->
+    <div data-scroll-animation class="scroll-animation-wrapper">
+      <div class="scroll-animation-container">
+        <div class="scroll-animation-header">
+          <h2>Nature's Pure Ingredients</h2>
+          <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to experience the power of organic botanicals</p>
+        </div>
+        <div class="scroll-animation-card" data-scroll-card>
+          <img src="https://images.unsplash.com/photo-1556228453-11aca1de4002?w=900&h=600&fit=crop" alt="Organic botanical ingredients" class="scroll-animation-image">
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container">
