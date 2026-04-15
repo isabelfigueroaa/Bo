@@ -467,7 +467,7 @@ p { margin-bottom: 1.2rem; }
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('Images/cover.jpg') center 18% / cover no-repeat;
+  background: url('Images/cover.jpg') center 60% / contain no-repeat;
   overflow: visible;
   margin-top: 60px;
 }
