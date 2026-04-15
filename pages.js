@@ -136,63 +136,6 @@ function getHomePage() {
       </div>
     </section>
 
-    <!-- Scroll Animation Section -->
-    <div data-scroll-animation class="scroll-animation-wrapper">
-      <div class="scroll-animation-container">
-        <div class="scroll-animation-header">
-          <h2>Experience the BO Difference</h2>
-          <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to discover how our products transform your skincare routine</p>
-        </div>
-        <div class="scroll-animation-card" data-scroll-card>
-          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&h=600&fit=crop" alt="BO Organics skincare products" class="scroll-animation-image">
-        </div>
-      </div>
-    </div>
-
-    <!-- Jar Opening Scroll Animation Section -->
-    <section class="jar-scroll-section" data-jar-scroll>
-      <div class="jar-sticky-container">
-        <div class="jar-container">
-          <div class="jar-images">
-            <img src="Images/closed container.png" alt="Closed jar" data-jar-closed>
-            <img src="Images/open container.png" alt="Open jar" data-jar-open>
-            <div data-jar-glow></div>
-          </div>
-          <div data-jar-lid></div>
-        </div>
-        <div class="jar-content">
-          <h2>Unlock Your Radiance</h2>
-          <p>Scroll to experience the transformation within our signature moisturizer</p>
-        </div>
-      </div>
-      <div style="position: relative; height: 200vh; padding-top: 100px;">
-        <div style="max-width: 900px; margin: 0 auto; padding: 60px 30px; text-align: center;">
-          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #1a1a1a; margin: 0 0 24px; letter-spacing: -0.5px;">The Power Inside</h3>
-          <p style="font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.8; color: #666; max-width: 700px; margin: 0 auto;">
-            Our award-winning Hydra-Bloom Moisturizer combines hyaluronic acid, vitamin E, and rosehip seed oil to deliver deep hydration and a visible radiance boost. Each jar holds the promise of transformed skin—hydrated, glowing, and resilient.
-          </p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px;">
-            <div>
-              <div style="font-size: 32px; margin-bottom: 12px;">💧</div>
-              <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #1a1a1a; margin: 0 0 8px;">Deep Hydration</h4>
-              <p style="font-size: 14px; color: #999; margin: 0;">Hyaluronic acid holds 1000x its weight in water</p>
-            </div>
-            <div>
-              <div style="font-size: 32px; margin-bottom: 12px;">🌱</div>
-              <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #1a1a1a; margin: 0 0 8px;">100% Organic</h4>
-              <p style="font-size: 14px; color: #999; margin: 0;">Certified organic ingredients from trusted sources</p>
-            </div>
-            <div>
-              <div style="font-size: 32px; margin-bottom: 12px;">✨</div>
-              <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #1a1a1a; margin: 0 0 8px;">Visible Radiance</h4>
-              <p style="font-size: 14px; color: #999; margin: 0;">Results visible in as little as 7 days</p>
-            </div>
-          </div>
-          <a href="#/shop" class="btn btn-primary" style="margin-top: 60px; display: inline-block;">Shop Hydra-Bloom</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Shop Section -->
     <section class="shop" id="shop">
       <div class="container">
