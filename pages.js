@@ -312,7 +312,7 @@ function getHomePage() {
             <a href="#/ingredients" class="btn btn-primary">Explore Our Ingredients</a>
           </div>
           <div class="ingredients-cta-image">
-            <img src="fruit-and-cream.jpg" alt="Fresh fruits and cream ingredients" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            <img src="bo-and-cherry-product.png" alt="Fresh fruits and cream ingredients" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
           </div>
         </div>
       </div>
@@ -930,7 +930,7 @@ function getIngredientsPage() {
           </div>
           <div class="ingredients-visual">
             <div class="ingredients-image-placeholder" style="padding: 0; overflow: hidden;">
-              <img src="fruit-and-cream.jpg" alt="Fresh fruits and cream ingredients" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+              <img src="bo-and-cherry-product.png" alt="Fresh fruits and cream ingredients" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
               <span>Ethically Sourced</span>
             </div>
           </div>
