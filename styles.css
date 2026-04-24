@@ -121,6 +121,12 @@ body {
   transform: translateY(0);
 }
 
+.hero-image-cover .shop-dropdown-group:hover .shop-dropdown-menu {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-10px) !important;
+}
+
 .shop-dropdown-item {
   display: block;
   padding: 12px 16px;
