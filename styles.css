@@ -49,8 +49,8 @@ body {
   left: -20px;
   right: -20px;
   background: var(--bg-light);
-  border-top: 1px solid var(--border);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-top: none;
+  box-shadow: none;
   display: flex;
   flex-direction: row;
   gap: 0;
