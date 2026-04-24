@@ -160,7 +160,7 @@ function getHomePage() {
               <h3 class="product-name">Radiance Face Serum</h3>
               <p class="product-desc">Rosehip & Vitamin C brightening serum for luminous, even-toned skin</p>
               <div class="product-footer">
-                <span class="product-price">$48.00</span>
+                <span class="product-price">${formatPrice(48.00)}</span>
                 <button class="add-to-cart" data-product-id="radiance-face-serum" data-name="Radiance Face Serum" data-price="48.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -176,7 +176,7 @@ function getHomePage() {
               <h3 class="product-name">Botanical Cleansing Oil</h3>
               <p class="product-desc">Gentle jojoba & chamomile oil cleanser that melts away impurities</p>
               <div class="product-footer">
-                <span class="product-price">$36.00</span>
+                <span class="product-price">${formatPrice(36.00)}</span>
                 <button class="add-to-cart" data-product-id="botanical-cleansing-oil" data-name="Botanical Cleansing Oil" data-price="36.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -193,7 +193,7 @@ function getHomePage() {
               <h3 class="product-name">Hydra-Bloom Moisturizer</h3>
               <p class="product-desc">Deep hydration with hyaluronic acid, aloe vera & shea butter</p>
               <div class="product-footer">
-                <span class="product-price">$42.00</span>
+                <span class="product-price">${formatPrice(42.00)}</span>
                 <button class="add-to-cart" data-product-id="hydra-bloom-moisturizer" data-name="Hydra-Bloom Moisturizer" data-price="42.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -209,7 +209,7 @@ function getHomePage() {
               <h3 class="product-name">Nourishing Body Butter</h3>
               <p class="product-desc">Rich cocoa butter & lavender body cream for silky smooth skin</p>
               <div class="product-footer">
-                <span class="product-price">$32.00</span>
+                <span class="product-price">${formatPrice(32.00)}</span>
                 <button class="add-to-cart" data-product-id="nourishing-body-butter" data-name="Nourishing Body Butter" data-price="32.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -226,7 +226,7 @@ function getHomePage() {
               <h3 class="product-name">Calming Body Oil</h3>
               <p class="product-desc">Argan & sweet almond oil infused with calming essential oils</p>
               <div class="product-footer">
-                <span class="product-price">$38.00</span>
+                <span class="product-price">${formatPrice(38.00)}</span>
                 <button class="add-to-cart" data-product-id="calming-body-oil" data-name="Calming Body Oil" data-price="38.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -243,7 +243,7 @@ function getHomePage() {
               <h3 class="product-name">Delicate Eye Contour</h3>
               <p class="product-desc">Caffeine & peptide-infused cream to reduce puffiness and fine lines</p>
               <div class="product-footer">
-                <span class="product-price">$54.00</span>
+                <span class="product-price">${formatPrice(54.00)}</span>
                 <button class="add-to-cart" data-product-id="delicate-eye-contour" data-name="Delicate Eye Contour" data-price="54.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -260,7 +260,7 @@ function getHomePage() {
               <h3 class="product-name">Nourishing Hair Elixir</h3>
               <p class="product-desc">Argan oil & botanical extracts to restore shine and elasticity</p>
               <div class="product-footer">
-                <span class="product-price">$44.00</span>
+                <span class="product-price">${formatPrice(44.00)}</span>
                 <button class="add-to-cart" data-product-id="nourishing-hair-elixir" data-name="Nourishing Hair Elixir" data-price="44.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -277,7 +277,7 @@ function getHomePage() {
               <h3 class="product-name">Complete Glow Set</h3>
               <p class="product-desc">Face serum, cleansing oil & moisturizer – everything you need</p>
               <div class="product-footer">
-                <span class="product-price">$115.00</span>
+                <span class="product-price">${formatPrice(115.00)}</span>
                 <button class="add-to-cart" data-product-id="complete-glow-set" data-name="Complete Glow Set" data-price="115.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -293,7 +293,7 @@ function getHomePage() {
               <h3 class="product-name">Body Care Collection</h3>
               <p class="product-desc">Body butter, body oil & exfoliating scrub for total body care</p>
               <div class="product-footer">
-                <span class="product-price">$98.00</span>
+                <span class="product-price">${formatPrice(98.00)}</span>
                 <button class="add-to-cart" data-product-id="body-care-collection" data-name="Body Care Collection" data-price="98.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -519,7 +519,7 @@ function getShopPage() {
               <h3 class="product-name">Radiance Face Serum</h3>
               <p class="product-desc">Rosehip & Vitamin C brightening serum for luminous, even-toned skin</p>
               <div class="product-footer">
-                <span class="product-price">$48.00</span>
+                <span class="product-price">${formatPrice(48.00)}</span>
                 <button class="add-to-cart" data-product-id="radiance-face-serum" data-name="Radiance Face Serum" data-price="48.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -540,7 +540,7 @@ function getShopPage() {
               <h3 class="product-name">Botanical Cleansing Oil</h3>
               <p class="product-desc">Gentle jojoba & chamomile oil cleanser that melts away impurities</p>
               <div class="product-footer">
-                <span class="product-price">$36.00</span>
+                <span class="product-price">${formatPrice(36.00)}</span>
                 <button class="add-to-cart" data-product-id="botanical-cleansing-oil" data-name="Botanical Cleansing Oil" data-price="36.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -562,7 +562,7 @@ function getShopPage() {
               <h3 class="product-name">Hydra-Bloom Moisturizer</h3>
               <p class="product-desc">Deep hydration with hyaluronic acid, aloe vera & shea butter</p>
               <div class="product-footer">
-                <span class="product-price">$42.00</span>
+                <span class="product-price">${formatPrice(42.00)}</span>
                 <button class="add-to-cart" data-product-id="hydra-bloom-moisturizer" data-name="Hydra-Bloom Moisturizer" data-price="42.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -583,7 +583,7 @@ function getShopPage() {
               <h3 class="product-name">Nourishing Body Butter</h3>
               <p class="product-desc">Rich cocoa butter & lavender body cream for silky smooth skin</p>
               <div class="product-footer">
-                <span class="product-price">$32.00</span>
+                <span class="product-price">${formatPrice(32.00)}</span>
                 <button class="add-to-cart" data-product-id="nourishing-body-butter" data-name="Nourishing Body Butter" data-price="32.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -605,7 +605,7 @@ function getShopPage() {
               <h3 class="product-name">Calming Body Oil</h3>
               <p class="product-desc">Argan & sweet almond oil infused with calming essential oils</p>
               <div class="product-footer">
-                <span class="product-price">$38.00</span>
+                <span class="product-price">${formatPrice(38.00)}</span>
                 <button class="add-to-cart" data-product-id="calming-body-oil" data-name="Calming Body Oil" data-price="38.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -627,7 +627,7 @@ function getShopPage() {
               <h3 class="product-name">Delicate Eye Contour</h3>
               <p class="product-desc">Caffeine & peptide-infused cream to reduce puffiness and fine lines</p>
               <div class="product-footer">
-                <span class="product-price">$54.00</span>
+                <span class="product-price">${formatPrice(54.00)}</span>
                 <button class="add-to-cart" data-product-id="delicate-eye-contour" data-name="Delicate Eye Contour" data-price="54.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -649,7 +649,7 @@ function getShopPage() {
               <h3 class="product-name">Nourishing Hair Elixir</h3>
               <p class="product-desc">Argan oil & botanical extracts to restore shine and elasticity</p>
               <div class="product-footer">
-                <span class="product-price">$44.00</span>
+                <span class="product-price">${formatPrice(44.00)}</span>
                 <button class="add-to-cart" data-product-id="nourishing-hair-elixir" data-name="Nourishing Hair Elixir" data-price="44.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -671,7 +671,7 @@ function getShopPage() {
               <h3 class="product-name">Complete Glow Set</h3>
               <p class="product-desc">Face serum, cleansing oil & moisturizer – everything you need</p>
               <div class="product-footer">
-                <span class="product-price">$115.00</span>
+                <span class="product-price">${formatPrice(115.00)}</span>
                 <button class="add-to-cart" data-product-id="complete-glow-set" data-name="Complete Glow Set" data-price="115.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -692,7 +692,7 @@ function getShopPage() {
               <h3 class="product-name">Body Care Collection</h3>
               <p class="product-desc">Body butter, body oil & exfoliating scrub for total body care</p>
               <div class="product-footer">
-                <span class="product-price">$98.00</span>
+                <span class="product-price">${formatPrice(98.00)}</span>
                 <button class="add-to-cart" data-product-id="body-care-collection" data-name="Body Care Collection" data-price="98.00" onclick="event.stopPropagation();">Add to Cart</button>
               </div>
             </div>
@@ -1505,7 +1505,7 @@ function getProductDetailPage(productId) {
     html += '<div class="product-image-placeholder-large"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg></div>';
   }
 
-  html += '</div></div><div class="product-detail-info"><h1 class="product-detail-title">' + product.name + '</h1><p class="product-detail-category">' + product.category + '</p><p class="product-detail-price">$' + product.price.toFixed(2) + '</p><div class="product-detail-description"><h3>Description</h3><p>' + product.description + '</p></div><div class="product-detail-benefits"><h3>Key Benefits</h3><ul>';
+  html += '</div></div><div class="product-detail-info"><h1 class="product-detail-title">' + product.name + '</h1><p class="product-detail-category">' + product.category + '</p><p class="product-detail-price">' + formatPrice(product.price) + '</p><div class="product-detail-description"><h3>Description</h3><p>' + product.description + '</p></div><div class="product-detail-benefits"><h3>Key Benefits</h3><ul>';
   
   product.benefits.forEach(b => {
     html += '<li>' + b + '</li>';
