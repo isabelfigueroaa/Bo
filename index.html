@@ -65,6 +65,29 @@
     </div>
   </nav>
 
+  <!-- Currency Selector Modal -->
+  <div class="currency-overlay" id="currencyOverlay"></div>
+  <div class="currency-modal" id="currencyModal">
+    <div class="currency-modal-content">
+      <h2>Select Your Country & Currency</h2>
+      <p>Choose your location to see prices in your currency</p>
+      <div class="currency-buttons">
+        <button class="currency-button" data-currency="USD" data-country="USA">
+          <span class="currency-name">USA</span>
+          <span class="currency-code">USD ($)</span>
+        </button>
+        <button class="currency-button" data-currency="MXN" data-country="Mexico">
+          <span class="currency-name">Mexico</span>
+          <span class="currency-code">MXN ($)</span>
+        </button>
+        <button class="currency-button" data-currency="EUR" data-country="Europe">
+          <span class="currency-name">Europe</span>
+          <span class="currency-code">EUR (€)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- PAGE CONTAINER - Content changes here, navbar stays -->
   <div id="app">
     <!-- Pages will be injected here -->

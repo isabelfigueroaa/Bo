@@ -215,7 +215,7 @@ function loadRelatedProducts(relatedIds, currentProductId) {
             <h3 class="product-name">${product.name}</h3>
             <p class="product-desc">${product.description.substring(0, 50)}...</p>
             <div class="product-footer">
-              <span class="product-price">$${product.price.toFixed(2)}</span>
+              <span class="product-price">${formatPrice(product.price)}</span>
               <button class="add-to-cart" data-name="${product.name}" data-price="${product.price}">Add to Cart</button>
             </div>
           </div>

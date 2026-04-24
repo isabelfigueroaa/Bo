@@ -452,19 +452,19 @@
         <div class="order-summary-section">
           <div class="order-summary-row">
             <span class="order-summary-label">Subtotal</span>
-            <span id="summarySubtotal">$0.00</span>
+            <span id="summarySubtotal">${currencyConfig[selectedCurrency].symbol}0.00</span>
           </div>
           <div class="order-summary-row">
             <span class="order-summary-label">Shipping</span>
-            <span id="summaryShipping">$5.00</span>
+            <span id="summaryShipping">${currencyConfig[selectedCurrency].symbol}5.00</span>
           </div>
           <div class="order-summary-row">
             <span class="order-summary-label">Tax (10%)</span>
-            <span id="summaryTax">$0.00</span>
+            <span id="summaryTax">${currencyConfig[selectedCurrency].symbol}0.00</span>
           </div>
           <div class="order-summary-row total">
             <span>Total</span>
-            <span id="checkoutTotal">$0.00</span>
+            <span id="checkoutTotal">${currencyConfig[selectedCurrency].symbol}0.00</span>
           </div>
         </div>
       </div>
@@ -472,6 +472,38 @@
   </section>
 
   <script>
+    // ---- Currency Configuration (same as script.js) ----
+    let selectedCurrency = 'USD';
+    const currencyConfig = {
+      USD: { name: 'USD', symbol: '$', rate: 1, country: 'USA' },
+      MXN: { name: 'MXN', symbol: '$', rate: 17.5, country: 'Mexico' },
+      EUR: { name: 'EUR', symbol: '€', rate: 0.92, country: 'Europe' }
+    };
+
+    // Convert price from base USD to selected currency
+    function convertPrice(basePrice) {
+      return basePrice * currencyConfig[selectedCurrency].rate;
+    }
+
+    // Format price with currency symbol
+    function formatPrice(basePrice) {
+      const converted = convertPrice(basePrice);
+      const symbol = currencyConfig[selectedCurrency].symbol;
+      return `${symbol}${converted.toFixed(2)}`;
+    }
+
+    // Load currency from localStorage
+    function loadCurrency() {
+      const saved = localStorage.getItem('boCurrency');
+      if (saved && currencyConfig[saved]) {
+        selectedCurrency = saved;
+      } else {
+        selectedCurrency = 'USD'; // Default to USD if not found
+      }
+    }
+
+    loadCurrency();
+
     // Get cart from session storage
     const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
@@ -501,7 +533,7 @@
             <div class="order-item-name">${item.name}</div>
             <div class="order-item-qty">Qty: ${item.qty}</div>
           </div>
-          <div class="order-item-price">$${(item.price * item.qty).toFixed(2)}</div>
+          <div class="order-item-price">${formatPrice(item.price * item.qty)}</div>
         </div>
       `).join('');
 
@@ -515,10 +547,10 @@
       const tax = subtotal * TAX_RATE;
       const total = subtotal + shippingCost + tax;
 
-      summarySubtotal.textContent = '$' + subtotal.toFixed(2);
-      summaryShipping.textContent = '$' + shippingCost.toFixed(2);
-      summaryTax.textContent = '$' + tax.toFixed(2);
-      checkoutTotal.textContent = '$' + total.toFixed(2);
+      summarySubtotal.textContent = formatPrice(subtotal);
+      summaryShipping.textContent = formatPrice(shippingCost);
+      summaryTax.textContent = formatPrice(tax);
+      checkoutTotal.textContent = formatPrice(total);
     }
 
     // Handle "Same as billing" checkbox

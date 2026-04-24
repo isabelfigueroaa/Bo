@@ -11,6 +11,68 @@ let wishlist = [];
 // ---- Search State ----
 let currentSearchTerm = '';
 
+// ---- Currency State ----
+let selectedCurrency = 'USD';
+
+// Currency configuration with exchange rates
+const currencyConfig = {
+  USD: { name: 'USD', symbol: '$', rate: 1, country: 'USA' },
+  MXN: { name: 'MXN', symbol: '$', rate: 17.5, country: 'Mexico' },
+  EUR: { name: 'EUR', symbol: '€', rate: 0.92, country: 'Europe' }
+};
+
+// Convert price from base USD to selected currency
+function convertPrice(basePrice) {
+  return basePrice * currencyConfig[selectedCurrency].rate;
+}
+
+// Format price with currency symbol
+function formatPrice(basePrice) {
+  const converted = convertPrice(basePrice);
+  const symbol = currencyConfig[selectedCurrency].symbol;
+  return `${symbol}${converted.toFixed(2)}`;
+}
+
+// Initialize currency from localStorage or show modal
+function initializeCurrency() {
+  const saved = localStorage.getItem('boCurrency');
+  if (saved) {
+    selectedCurrency = saved;
+    // If currency was saved, don't show modal
+  } else {
+    // First visit - show currency modal
+    showCurrencyModal();
+  }
+}
+
+// Show currency selector modal
+function showCurrencyModal() {
+  const modal = document.getElementById('currencyModal');
+  const overlay = document.getElementById('currencyOverlay');
+  modal.classList.add('show');
+  overlay.classList.add('show');
+}
+
+// Hide currency selector modal
+function hideCurrencyModal() {
+  const modal = document.getElementById('currencyModal');
+  const overlay = document.getElementById('currencyOverlay');
+  modal.classList.remove('show');
+  overlay.classList.remove('show');
+}
+
+// Set currency and save to localStorage
+function setCurrency(currencyCode) {
+  selectedCurrency = currencyCode;
+  localStorage.setItem('boCurrency', currencyCode);
+  hideCurrencyModal();
+  // Re-render current page with new currency
+  const route = getCurrentRoute();
+  renderPage(route);
+  // Update cart display with new prices
+  updateCart();
+}
+
 // Initialize wishlist from localStorage
 function initializeWishlist() {
   const saved = localStorage.getItem('boWishlist');
@@ -80,13 +142,14 @@ function updateCart() {
     cartFooter.style.display = 'none';
   } else {
     cartFooter.style.display = 'block';
-    cartTotal.textContent = '$' + totalPrice.toFixed(2);
+    const convertedTotal = convertPrice(totalPrice);
+    cartTotal.textContent = `${currencyConfig[selectedCurrency].symbol}${convertedTotal.toFixed(2)}`;
 
     cartItems.innerHTML = cart.map((item, index) => `
       <div class="cart-item">
         <div class="cart-item-info">
           <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.qty}</div>
+          <div class="cart-item-price">${formatPrice(item.price)} x ${item.qty}</div>
         </div>
         <button class="cart-item-remove" data-index="${index}">&times;</button>
       </div>
@@ -196,6 +259,15 @@ function updateWishlistUI() {
 }
 
 function attachEventListeners() {
+  // ---- Currency Selector ----
+  const currencyButtons = document.querySelectorAll('.currency-button');
+  currencyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const currency = button.getAttribute('data-currency');
+      setCurrency(currency);
+    });
+  });
+
   // ---- Navbar Scroll Effect + Hero Parallax ----
   const navbar = document.getElementById('navbar');
   const heroContent = document.querySelector('.hero-content');
@@ -668,7 +740,10 @@ window.addEventListener('hashchange', () => {
 
 // ---- Initial Page Load ----
 document.addEventListener('DOMContentLoaded', () => {
+  initializeCurrency();
   initializeWishlist();
   const route = getCurrentRoute();
   renderPage(route);
+  // Attach event listeners after initial page load
+  setTimeout(() => attachEventListeners(), 100);
 });
