@@ -4469,6 +4469,28 @@ p { margin-bottom: 1.2rem; }
   }
 }
 
+/* --- Currency Selector Button --- */
+.currency-selector-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.currency-selector-btn:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.currency-selector-btn:active {
+  transform: scale(0.95);
+}
+
 /* --- Currency Selector Modal --- */
 .currency-overlay {
   position: fixed;

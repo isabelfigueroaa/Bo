@@ -259,7 +259,13 @@ function updateWishlistUI() {
 }
 
 function attachEventListeners() {
-  // ---- Currency Selector ----
+  // ---- Currency Selector Button (Navbar) ----
+  const currencyBtn = document.getElementById('currencyBtn');
+  if (currencyBtn) {
+    currencyBtn.addEventListener('click', showCurrencyModal);
+  }
+
+  // ---- Currency Modal Buttons ----
   const currencyButtons = document.querySelectorAll('.currency-button');
   currencyButtons.forEach(button => {
     button.addEventListener('click', () => {
