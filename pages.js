@@ -69,7 +69,7 @@ const ingredientsDatabase = {
 function getHomePage() {
   return `
     <!-- Hero Section with Bo-Organic Image Cover -->
-    <section class="hero hero-image-cover" id="home" style="background-image: url('Images/Bo-organic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="hero hero-image-cover" id="home" style="background-image: url('Images/cover.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <div class="hero-overlay-dark"></div>
       <div class="hero-content-overlay">
         <div class="hero-buttons">
@@ -154,9 +154,7 @@ function getHomePage() {
           <div class="product-card" data-category="face" style="cursor: pointer;">
             <div class="product-badge">Bestseller</div>
             <div class="product-image">
-              <div class="product-image-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
-              </div>
+              <img src="Images/product1.png" alt="Radiance Face Serum" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="product-info">
               <h3 class="product-name">Radiance Face Serum</h3>
@@ -515,9 +513,7 @@ function getShopPage() {
               </svg>
             </button>
             <div class="product-image">
-              <div class="product-image-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg>
-              </div>
+              <img src="Images/product1.png" alt="Radiance Face Serum" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="product-info">
               <h3 class="product-name">Radiance Face Serum</h3>
