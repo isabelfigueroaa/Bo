@@ -73,22 +73,22 @@ function getHomePage() {
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="logo-container">
-          <img src="Images/logo official.png" alt="BO Organics Logo" class="hero-logo">
+          <img src="Images/logo official.png" alt="BO Organics Logo" class="hero-logo-large">
         </div>
-        <p class="hero-subtitle">Pure, Intentional Beauty</p>
-        <h1 class="hero-title">BO Organics</h1>
-        <p class="hero-description">Handcrafted organic skincare made with ethically sourced botanicals. No synthetics. No compromises. Just pure, radiant beauty.</p>
-        <div class="hero-buttons">
-          <div class="shop-dropdown-group">
-            <a href="#/shop" class="btn btn-primary">Shop Now</a>
-            <div class="shop-dropdown-menu">
-              <a href="#/shop" class="shop-dropdown-item" data-filter="all">All Products</a>
-              <a href="#/shop" class="shop-dropdown-item" data-filter="new">New Arrivals</a>
-              <a href="#/shop" class="shop-dropdown-item" data-filter="face">Face Care</a>
-              <a href="#/shop" class="shop-dropdown-item" data-filter="body">Body Care</a>
-              <a href="#/shop" class="shop-dropdown-item" data-filter="eyes">Eye Care</a>
-              <a href="#/shop" class="shop-dropdown-item" data-filter="hair">Hair Care</a>
-              <a href="#/shop" class="shop-dropdown-item" data-filter="sets">Sets & Bundles</a>
+        <div class="hero-text-content">
+          <p class="hero-description-small">Handcrafted organic skincare made with ethically sourced botanicals</p>
+          <div class="hero-buttons">
+            <div class="shop-dropdown-group">
+              <a href="#/shop" class="btn btn-primary">Shop Now</a>
+              <div class="shop-dropdown-menu">
+                <a href="#/shop" class="shop-dropdown-item" data-filter="all">All Products</a>
+                <a href="#/shop" class="shop-dropdown-item" data-filter="new">New Arrivals</a>
+                <a href="#/shop" class="shop-dropdown-item" data-filter="face">Face Care</a>
+                <a href="#/shop" class="shop-dropdown-item" data-filter="body">Body Care</a>
+                <a href="#/shop" class="shop-dropdown-item" data-filter="eyes">Eye Care</a>
+                <a href="#/shop" class="shop-dropdown-item" data-filter="hair">Hair Care</a>
+                <a href="#/shop" class="shop-dropdown-item" data-filter="sets">Sets & Bundles</a>
+              </div>
             </div>
           </div>
         </div>

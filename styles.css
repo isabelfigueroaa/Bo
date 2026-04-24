@@ -572,47 +572,58 @@ p { margin-bottom: 1.2rem; }
 
 /* ===== HERO LOGO COVER SECTION ===== */
 .hero-logo-cover {
-  background: linear-gradient(135deg, rgba(250, 248, 245, 0.95) 0%, rgba(245, 241, 237, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(250, 248, 245, 0.98) 0%, rgba(245, 241, 237, 0.98) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .logo-container {
-  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: fadeInDown 0.8s ease-out;
+  flex: 1;
+  min-height: 50%;
 }
 
-.hero-logo {
-  max-width: 280px;
-  width: 100%;
+.hero-logo-large {
+  max-width: 600px;
+  width: 90%;
   height: auto;
-  filter: drop-shadow(0 10px 30px rgba(106, 3, 20, 0.15));
+  filter: drop-shadow(0 15px 40px rgba(106, 3, 20, 0.12));
   transition: transform 0.3s ease;
 }
 
-.hero-logo:hover {
-  transform: scale(1.05);
+.hero-logo-large:hover {
+  transform: scale(1.03);
 }
 
-.hero-logo-cover .hero-title {
-  color: var(--burgundy);
-  margin-top: 30px;
-  font-size: 3.5rem;
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 80px;
 }
 
-.hero-logo-cover .hero-subtitle {
-  color: var(--text-light);
-}
-
-.hero-logo-cover .hero-description {
+.hero-description-small {
   color: var(--text);
+  font-size: 1rem;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 .hero-logo-cover .hero-buttons .btn {
   color: var(--burgundy);
   border-color: var(--burgundy);
   background: transparent;
+  font-weight: 600;
+  padding: 14px 40px;
+  letter-spacing: 1.5px;
 }
 
 .hero-logo-cover .hero-buttons .btn:hover {
@@ -4440,30 +4451,30 @@ p { margin-bottom: 1.2rem; }
   }
 
   /* Logo Cover Responsive Styles */
-  .hero-logo {
-    max-width: 180px;
+  .hero-logo-large {
+    max-width: 320px;
   }
 
-  .hero-logo-cover .hero-title {
-    font-size: 2.2rem;
+  .hero-description-small {
+    font-size: 0.9rem;
   }
 
-  .hero-logo-cover .hero-subtitle {
-    font-size: 0.75rem;
-  }
-
-  .hero-logo-cover .hero-description {
-    font-size: 0.95rem;
+  .hero-text-content {
+    padding-bottom: 60px;
   }
 }
 
 @media (max-width: 768px) {
   /* Logo Cover Responsive Styles */
-  .hero-logo {
-    max-width: 220px;
+  .hero-logo-large {
+    max-width: 400px;
   }
 
-  .hero-logo-cover .hero-title {
-    font-size: 2.8rem;
+  .hero-description-small {
+    font-size: 0.95rem;
+  }
+
+  .hero-text-content {
+    padding-bottom: 70px;
   }
 }
