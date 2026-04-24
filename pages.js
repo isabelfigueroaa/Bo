@@ -69,7 +69,7 @@ const ingredientsDatabase = {
 function getHomePage() {
   return `
     <!-- Hero Section with Bo-Organic Image Cover -->
-    <section class="hero hero-image-cover" id="home" style="background-image: url('Images/cover.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="hero hero-image-cover" id="home" style="background-image: url('Images/cover.jpg'); background-size: 60%; background-position: center; background-repeat: no-repeat; background-color: #f5f1ed;">
       <div class="hero-overlay-dark"></div>
       <div class="hero-content-overlay">
         <div class="hero-buttons">

@@ -578,7 +578,7 @@ p { margin-bottom: 1.2rem; }
 
 /* ===== HERO IMAGE COVER SECTION ===== */
 .hero-image-cover {
-  background-size: cover !important;
+  background-size: contain !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   height: 100vh;
