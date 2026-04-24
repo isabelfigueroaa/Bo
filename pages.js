@@ -68,12 +68,15 @@ const ingredientsDatabase = {
 // HOME PAGE
 function getHomePage() {
   return `
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Hero Section with Logo Cover -->
+    <section class="hero hero-logo-cover" id="home">
       <div class="hero-overlay"></div>
       <div class="hero-content">
+        <div class="logo-container">
+          <img src="Images/logo official.png" alt="BO Organics Logo" class="hero-logo">
+        </div>
         <p class="hero-subtitle">Pure, Intentional Beauty</p>
-        <h1 class="hero-title">Nourish Your Skin<br>With Nature's Finest</h1>
+        <h1 class="hero-title">BO Organics</h1>
         <p class="hero-description">Handcrafted organic skincare made with ethically sourced botanicals. No synthetics. No compromises. Just pure, radiant beauty.</p>
         <div class="hero-buttons">
           <div class="shop-dropdown-group">

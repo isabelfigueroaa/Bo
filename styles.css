@@ -570,6 +570,77 @@ p { margin-bottom: 1.2rem; }
   50% { transform: translateY(10px); }
 }
 
+/* ===== HERO LOGO COVER SECTION ===== */
+.hero-logo-cover {
+  background: linear-gradient(135deg, rgba(250, 248, 245, 0.95) 0%, rgba(245, 241, 237, 0.95) 100%);
+}
+
+.logo-container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(106, 3, 20, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+.hero-logo-cover .hero-title {
+  color: var(--burgundy);
+  margin-top: 30px;
+  font-size: 3.5rem;
+}
+
+.hero-logo-cover .hero-subtitle {
+  color: var(--text-light);
+}
+
+.hero-logo-cover .hero-description {
+  color: var(--text);
+}
+
+.hero-logo-cover .hero-buttons .btn {
+  color: var(--burgundy);
+  border-color: var(--burgundy);
+  background: transparent;
+}
+
+.hero-logo-cover .hero-buttons .btn:hover {
+  background: var(--burgundy);
+  color: var(--cream);
+}
+
+.hero-logo-cover .hero-buttons .btn-primary {
+  background: var(--burgundy);
+  color: var(--cream);
+}
+
+.hero-logo-cover .hero-buttons .btn-primary:hover {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== FEATURES BANNER ===== */
 .features {
   background: var(--bg-light);
@@ -4366,5 +4437,33 @@ p { margin-bottom: 1.2rem; }
     padding: 8px 10px;
     padding-right: 24px;
     font-size: 0.85rem;
+  }
+
+  /* Logo Cover Responsive Styles */
+  .hero-logo {
+    max-width: 180px;
+  }
+
+  .hero-logo-cover .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-logo-cover .hero-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hero-logo-cover .hero-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Logo Cover Responsive Styles */
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  .hero-logo-cover .hero-title {
+    font-size: 2.8rem;
   }
 }
