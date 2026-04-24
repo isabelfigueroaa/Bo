@@ -1,5 +1,5 @@
 /* ============================================
-   BO Organics — SPA Page Templates
+   Bo Beauty — SPA Page Templates
    ============================================ */
 
 // Ingredient Database
@@ -387,7 +387,7 @@ function getHomePage() {
     <section class="newsletter">
       <div class="container">
         <div class="newsletter-content">
-          <h2>Join the BO Organics Family</h2>
+          <h2>Join the Bo Beauty Family</h2>
           <p>Subscribe for exclusive offers, skincare tips, and early access to new products.</p>
           <form class="newsletter-form" id="newsletterForm">
             <input type="email" placeholder="Enter your email" required>
@@ -402,7 +402,7 @@ function getHomePage() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
             <div class="social-links">
               <a href="#" aria-label="Instagram">
@@ -444,7 +444,7 @@ function getHomePage() {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 BO Organics. All rights reserved.</p>
+          <p>&copy; 2026 Bo Beauty. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -462,7 +462,7 @@ function getShopPage() {
           <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to discover what makes our products special</p>
         </div>
         <div class="scroll-animation-card" data-scroll-card>
-          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&h=600&fit=crop" alt="BO Organics bestselling products" class="scroll-animation-image">
+          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&h=600&fit=crop" alt="Bo Beauty bestselling products" class="scroll-animation-image">
         </div>
       </div>
     </div>
@@ -709,7 +709,7 @@ function getShopPage() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
             <div class="social-links">
               <a href="#" aria-label="Instagram">
@@ -745,7 +745,7 @@ function getShopPage() {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 BO Organics. All rights reserved.</p>
+          <p>&copy; 2026 Bo Beauty. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -764,13 +764,13 @@ function getAboutPage() {
                 <path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>BO Organics</span>
+              <span>Bo Beauty</span>
             </div>
           </div>
           <div class="about-text-content">
             <p class="section-label">Our Story</p>
             <h1 class="section-title">Beauty Born From Intention</h1>
-            <p class="about-text">BO Organics was founded with a simple belief: your skin deserves the same purity as the food you eat. We source the finest organic botanicals from sustainable farms around the world, crafting each product by hand in small batches.</p>
+            <p class="about-text">Bo Beauty was founded with a simple belief: your skin deserves the same purity as the food you eat. We source the finest organic botanicals from sustainable farms around the world, crafting each product by hand in small batches.</p>
             <p class="about-text">Every ingredient is chosen with intention. Every formula is designed to work in harmony with your skin's natural balance. No fillers. No toxins. Just the transformative power of nature.</p>
 
             <div class="about-stats">
@@ -813,7 +813,7 @@ function getAboutPage() {
           <p style="font-size: 16px; opacity: 0.7; margin-top: 12px;">Scroll to see how we create your skincare</p>
         </div>
         <div class="scroll-animation-card" data-scroll-card>
-          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&h=600&fit=crop" alt="BO Organics crafting process" class="scroll-animation-image">
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&h=600&fit=crop" alt="Bo Beauty crafting process" class="scroll-animation-image">
         </div>
       </div>
     </div>
@@ -822,7 +822,7 @@ function getAboutPage() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
           </div>
           <div class="footer-links">
@@ -851,7 +851,7 @@ function getAboutPage() {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 BO Organics. All rights reserved.</p>
+          <p>&copy; 2026 Bo Beauty. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -959,7 +959,7 @@ function getIngredientsPage() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
           </div>
           <div class="footer-links">
@@ -988,7 +988,7 @@ function getIngredientsPage() {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 BO Organics. All rights reserved.</p>
+          <p>&copy; 2026 Bo Beauty. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -1069,12 +1069,12 @@ function getJoinBoPage() {
     <footer class="footer">
       <div class="container">
         <div class="footer-brand">
-          <h3 class="logo">BO Organics</h3>
+          <h3 class="logo">Bo Beauty</h3>
           <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 BO Organics. All rights reserved.</p>
+        <p>&copy; 2026 Bo Beauty. All rights reserved.</p>
       </div>
     </footer>
   `;
@@ -1087,7 +1087,7 @@ function getLoginPage() {
       <div class="login-box">
         <div class="login-header">
           <h1>Welcome Back</h1>
-          <p>Sign in to your BO Organics account</p>
+          <p>Sign in to your Bo Beauty account</p>
         </div>
 
         <form id="loginForm">
@@ -1180,7 +1180,7 @@ function getIngredientDetailPage(ingredientId) {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
           </div>
           <div class="footer-links">
@@ -1209,7 +1209,7 @@ function getIngredientDetailPage(ingredientId) {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 BO Organics. All rights reserved.</p>
+          <p>&copy; 2026 Bo Beauty. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -1293,7 +1293,7 @@ function getWishlistPage() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
           </div>
           <div class="footer-links">
@@ -1427,7 +1427,7 @@ function getSearchResultsPage(searchTerm) {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h3 class="logo">BO Organics</h3>
+            <h3 class="logo">Bo Beauty</h3>
             <p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p>
           </div>
           <div class="footer-links">
@@ -1501,7 +1501,15 @@ function getProductDetailPage(productId) {
     return '<div class="container"><h2>Product Not Found</h2><p><a href="#/shop">Back to Shop</a></p></div>';
   }
 
-  let html = '<div class="product-detail-page"><div class="container"><a href="#/shop" class="back-link">← Back to Shop</a><div class="product-detail-container"><div class="product-detail-image"><div class="product-image-large"><div class="product-image-placeholder-large"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg></div></div></div><div class="product-detail-info"><h1 class="product-detail-title">' + product.name + '</h1><p class="product-detail-category">' + product.category + '</p><p class="product-detail-price">$' + product.price.toFixed(2) + '</p><div class="product-detail-description"><h3>Description</h3><p>' + product.description + '</p></div><div class="product-detail-benefits"><h3>Key Benefits</h3><ul>';
+  let html = '<div class="product-detail-page"><div class="container"><a href="#/shop" class="back-link">← Back to Shop</a><div class="product-detail-container"><div class="product-detail-image"><div class="product-image-large">';
+
+  if (productId === 'radiance-face-serum') {
+    html += '<img src="Images/product1.png" alt="' + product.name + '" class="product-image-large" style="width: 100%; height: 100%; object-fit: cover;">';
+  } else {
+    html += '<div class="product-image-placeholder-large"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-1a5 5 0 0110 0v1"/></svg></div>';
+  }
+
+  html += '</div></div><div class="product-detail-info"><h1 class="product-detail-title">' + product.name + '</h1><p class="product-detail-category">' + product.category + '</p><p class="product-detail-price">$' + product.price.toFixed(2) + '</p><div class="product-detail-description"><h3>Description</h3><p>' + product.description + '</p></div><div class="product-detail-benefits"><h3>Key Benefits</h3><ul>';
   
   product.benefits.forEach(b => {
     html += '<li>' + b + '</li>';

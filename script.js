@@ -1,5 +1,5 @@
 /* ============================================
-   BO Organics — SPA Routing & Shopping Cart
+   Bo Beauty — SPA Routing & Shopping Cart
    ============================================ */
 
 // ---- Shopping Cart (Persistent State) ----

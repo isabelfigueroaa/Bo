@@ -1,5 +1,5 @@
 /* ============================================
-   BO Organics — Product Detail Page
+   Bo Beauty — Product Detail Page
    ============================================ */
 
 // Product Database
@@ -122,7 +122,7 @@ function loadProductDetails() {
   }
 
   // Update page title
-  document.title = `${product.name} — BO Organics`;
+  document.title = `${product.name} — Bo Beauty`;
 
   // Update product information
   document.getElementById('productLabel').textContent = product.category;

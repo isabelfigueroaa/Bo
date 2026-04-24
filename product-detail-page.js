@@ -143,7 +143,7 @@ function getProductDetailPage(productId) {
 
   html += '</div></section>';
 
-  html += '<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3 class="logo">BO Organics</h3><p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#/shop">Shop All</a></li><li><a href="#/about">Our Story</a></li><li><a href="#/ingredients">Ingredients</a></li></ul></div></div></div></footer>';
+  html += '<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3 class="logo">Bo Beauty</h3><p>Pure, Intentional Beauty. Handcrafted organic skincare made with love and the finest botanicals.</p></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#/shop">Shop All</a></li><li><a href="#/about">Our Story</a></li><li><a href="#/ingredients">Ingredients</a></li></ul></div></div></div></footer>';
 
   return html;
 }

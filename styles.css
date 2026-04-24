@@ -616,10 +616,6 @@ p { margin-bottom: 1.2rem; }
   font-size: 0.9rem;
 }
 
-.hero-image-cover .hero-buttons .btn:hover {
-  background: var(--cream);
-  color: var(--burgundy);
-}
 
 .hero-image-cover .hero-buttons .btn-primary {
   background: var(--burgundy);
@@ -627,11 +623,6 @@ p { margin-bottom: 1.2rem; }
   border-color: var(--burgundy);
 }
 
-.hero-image-cover .hero-buttons .btn-primary:hover {
-  background: var(--cream);
-  color: var(--burgundy);
-  border-color: var(--cream);
-}
 
 @keyframes fadeInDown {
   from {
