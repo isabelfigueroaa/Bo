@@ -63,7 +63,8 @@ body {
   overflow: visible;
 }
 
-.nav-shop-dropdown:hover .nav-dropdown-menu {
+.nav-shop-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

@@ -315,6 +315,23 @@ function attachEventListeners() {
     });
   }
 
+  // ---- Shop Dropdown Hover ----
+  const shopDropdown = document.querySelector('.nav-shop-dropdown');
+  if (shopDropdown) {
+    shopDropdown.addEventListener('mouseenter', () => {
+      const menu = shopDropdown.querySelector('.nav-dropdown-menu');
+      if (menu) {
+        menu.classList.add('show');
+      }
+    });
+    shopDropdown.addEventListener('mouseleave', () => {
+      const menu = shopDropdown.querySelector('.nav-dropdown-menu');
+      if (menu) {
+        menu.classList.remove('show');
+      }
+    });
+  }
+
   // ---- Product Filter (Shop Page) ----
   const filterBtns = document.querySelectorAll('.filter-btn:not(.search-filter-btn)');
   const productCards = document.querySelectorAll('.product-card:not(.search-result-card)');
