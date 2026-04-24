@@ -68,27 +68,21 @@ const ingredientsDatabase = {
 // HOME PAGE
 function getHomePage() {
   return `
-    <!-- Hero Section with Logo Cover -->
-    <section class="hero hero-logo-cover" id="home">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="logo-container">
-          <img src="Images/logo official.png" alt="BO Organics Logo" class="hero-logo-large">
-        </div>
-        <div class="hero-text-content">
-          <p class="hero-description-small">Handcrafted organic skincare made with ethically sourced botanicals</p>
-          <div class="hero-buttons">
-            <div class="shop-dropdown-group">
-              <a href="#/shop" class="btn btn-primary">Shop Now</a>
-              <div class="shop-dropdown-menu">
-                <a href="#/shop" class="shop-dropdown-item" data-filter="all">All Products</a>
-                <a href="#/shop" class="shop-dropdown-item" data-filter="new">New Arrivals</a>
-                <a href="#/shop" class="shop-dropdown-item" data-filter="face">Face Care</a>
-                <a href="#/shop" class="shop-dropdown-item" data-filter="body">Body Care</a>
-                <a href="#/shop" class="shop-dropdown-item" data-filter="eyes">Eye Care</a>
-                <a href="#/shop" class="shop-dropdown-item" data-filter="hair">Hair Care</a>
-                <a href="#/shop" class="shop-dropdown-item" data-filter="sets">Sets & Bundles</a>
-              </div>
+    <!-- Hero Section with Bo-Organic Image Cover -->
+    <section class="hero hero-image-cover" id="home" style="background-image: url('Images/Bo-organic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="hero-overlay-dark"></div>
+      <div class="hero-content-overlay">
+        <div class="hero-buttons">
+          <div class="shop-dropdown-group">
+            <a href="#/shop" class="btn btn-primary">Shop Now</a>
+            <div class="shop-dropdown-menu">
+              <a href="#/shop" class="shop-dropdown-item" data-filter="all">All Products</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="new">New Arrivals</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="face">Face Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="body">Body Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="eyes">Eye Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="hair">Hair Care</a>
+              <a href="#/shop" class="shop-dropdown-item" data-filter="sets">Sets & Bundles</a>
             </div>
           </div>
         </div>
