@@ -68,8 +68,11 @@ const ingredientsDatabase = {
 // HOME PAGE
 function getHomePage() {
   return `
-    <!-- Hero Section with Bo-Organic Image Cover -->
-    <section class="hero hero-image-cover" id="home" style="background-image: url('Images/cover.jpg'); background-size: 60%; background-position: center; background-repeat: no-repeat; background-color: #f5f1ed;">
+    <!-- Hero Section with Video Background -->
+    <section class="hero hero-video-cover" id="home">
+      <video class="hero-video" autoplay muted loop playsinline style="display: block;">
+        <source src="cowvideo.mp4" type="video/mp4">
+      </video>
       <div class="hero-overlay-dark"></div>
       <div class="hero-content-overlay">
         <div class="hero-buttons">

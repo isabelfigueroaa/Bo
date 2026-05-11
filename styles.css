@@ -122,7 +122,8 @@ body {
   transform: translateY(0);
 }
 
-.hero-image-cover .shop-dropdown-group:hover .shop-dropdown-menu {
+.hero-image-cover .shop-dropdown-group:hover .shop-dropdown-menu,
+.hero-video-cover .shop-dropdown-group:hover .shop-dropdown-menu {
   opacity: 0 !important;
   visibility: hidden !important;
   transform: translateY(-10px) !important;
@@ -630,6 +631,72 @@ p { margin-bottom: 1.2rem; }
   border-color: var(--burgundy);
 }
 
+/* ===== HERO VIDEO COVER SECTION ===== */
+.hero-video-cover {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 !important;
+  margin-top: -60px !important;
+  padding-top: 60px !important;
+  background: #000;
+}
+
+#app .hero-video-cover {
+  margin: 0 !important;
+  margin-top: -60px !important;
+  padding-top: 60px !important;
+}
+
+.hero-video {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: 0 !important;
+  display: block !important;
+  background: #000;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.hero-video-cover .hero-buttons .btn {
+  color: var(--cream);
+  border-color: var(--cream);
+  background: transparent;
+  font-weight: 600;
+  padding: 14px 40px;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+}
+
+.hero-video-cover .hero-buttons .btn-primary {
+  background: var(--burgundy);
+  color: var(--cream);
+  border-color: var(--burgundy);
+}
+
+.hero-video-cover .hero-buttons .btn-primary:hover {
+  background: var(--cream);
+  color: var(--text);
+  border-color: var(--cream);
+}
+
+.hero-video-cover .hero-buttons .btn:focus,
+.hero-video-cover .hero-buttons .btn:focus-visible,
+.hero-video-cover .hero-buttons .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: var(--burgundy) !important;
+  color: var(--cream) !important;
+  border-color: var(--burgundy) !important;
+}
 
 @keyframes fadeInDown {
   from {
@@ -2768,6 +2835,15 @@ p { margin-bottom: 1.2rem; }
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 6px 12px rgba(106, 3, 20, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:focus-visible {
+  outline: none;
 }
 
 /* --- Feature Icon Hover --- */
